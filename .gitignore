@@ -1,0 +1,15 @@
+# Jekyll build artefacts
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Local dev (we don't carry Gemfile.lock to avoid platform drift)
+Gemfile.lock
+
+# OS / editor noise
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/

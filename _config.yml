@@ -1,0 +1,54 @@
+# Beautiful Jekyll via GitHub Pages' remote_theme — no local theme copy needed.
+# Reference: https://beautifuljekyll.com/
+
+# ────────────────────────────────────────────────────────────────────────
+# Site
+# ────────────────────────────────────────────────────────────────────────
+title: Field Reports
+description: Engineering experiments and field reports.
+url: "https://binhsu.github.io"
+baseurl: ""
+
+# Pull the theme directly from upstream so we never carry vendor files.
+remote_theme: daattali/beautiful-jekyll@master
+
+# ────────────────────────────────────────────────────────────────────────
+# Author (Pin-Feng (Bin) Hsu — full legal form per personal naming rule)
+# ────────────────────────────────────────────────────────────────────────
+author:
+  name: Pin-Feng (Bin) Hsu
+
+# ────────────────────────────────────────────────────────────────────────
+# Permalink — clean slug, no date-in-URL clutter
+# ────────────────────────────────────────────────────────────────────────
+permalink: /:title/
+
+# ────────────────────────────────────────────────────────────────────────
+# Top navbar
+# ────────────────────────────────────────────────────────────────────────
+navbar-links:
+  About: "about"
+  Portfolio: "https://binhsu.org"
+
+# ────────────────────────────────────────────────────────────────────────
+# Footer social links
+# ────────────────────────────────────────────────────────────────────────
+social-network-links:
+  github: BinHsu
+  linkedin: bin-hsu-taiwan
+
+# ────────────────────────────────────────────────────────────────────────
+# Build settings
+# ────────────────────────────────────────────────────────────────────────
+markdown: kramdown
+highlighter: rouge
+
+# Files Jekyll should skip when building
+exclude:
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+
+# Force trailing slash on URLs (cleaner for static hosting)
+trailing_slash: true
