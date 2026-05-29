@@ -13,3 +13,8 @@ Gemfile.lock
 *.swo
 .idea/
 .vscode/
+
+# Agent onboarding doc — local-only, contains operational paths + OPSEC notes
+# that don't need to be on the public Pages site. Lives on Bin's machine(s);
+# new machines need it recreated or synced via another channel.
+CLAUDE.md

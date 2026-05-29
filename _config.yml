@@ -46,6 +46,7 @@ highlighter: rouge
 # Files Jekyll should skip when building
 exclude:
   - README.md
+  - CLAUDE.md
   - .gitignore
   - Gemfile
   - Gemfile.lock
