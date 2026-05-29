@@ -1,7 +1,7 @@
 ---
 title: "After Jenkins, GitHub Actions feels fragmented"
 subtitle: "The thing you miss isn't Jenkins — it's a single control plane"
-date: 2026-05-29 14:00:00
+date: 2026-05-29 08:00:00
 tags: [cicd, jenkins, github-actions, platform-engineering]
 asset_path: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented
 thumbnail-img: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented/diagram.png

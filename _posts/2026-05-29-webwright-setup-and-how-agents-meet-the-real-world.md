@@ -1,7 +1,7 @@
 ---
 title: "Webwright setup and how agents meet the real world"
 subtitle: "The install path and the disciplines that travel"
-date: 2026-05-29 08:00:00
+date: 2026-05-29 06:00:00
 tags: [agents, frameworks, discipline]
 ---
 
