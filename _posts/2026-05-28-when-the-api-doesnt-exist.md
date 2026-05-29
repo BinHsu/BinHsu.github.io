@@ -95,6 +95,70 @@ ctx = browser.new_context(storage_state="auth.json")
 > If you build something like this yourself, do it against a service you legitimately own a session on,
 > at a natural human pace, and respect that service's Terms of Service.*
 
+## Session persistence — the load-bearing trick
+
+The piece that makes the whole loop practical, rather than "log in fresh on every run
+and get flagged for it within a week," is Playwright's **`storage_state`**.
+
+`BrowserContext.storage_state(path=...)` serialises the context's cookies + `localStorage`
+for every origin you've visited into a JSON file.
+Next session, `new_context(storage_state=path)` deserialises them back into a fresh context.
+The server sees the same cookies it issued during your manual login — it can't tell
+whether your browser is the same physical process or a different one a week later.
+
+The lifecycle in three states:
+
+1. **One-time setup** — headed browser, you log in by hand,
+   the script calls `ctx.storage_state(path="auth.json")` → JSON lands on disk
+2. **Every subsequent run** — `new_context(storage_state="auth.json")` → pages start authenticated
+3. **When the session expires** — the target site starts redirecting you to `/login`;
+   detect that, surface a re-setup prompt, log in again. Sessions typically survive a few weeks
+   if the site lets you keep "Remember me" checked, days otherwise
+
+What's actually in the file (abridged):
+
+```json
+{
+  "cookies": [
+    {
+      "name": "session_id",
+      "value": "…",
+      "domain": ".target.com",
+      "path": "/",
+      "expires": 1746000000,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://target.com",
+      "localStorage": [{ "name": "…", "value": "…" }]
+    }
+  ]
+}
+```
+
+Two operational notes that matter more than they look:
+
+- **The file is a credential.** `chmod 600`, gitignore the path,
+  and never copy it across machines without thinking about what you're doing.
+  A leaked `auth.json` is a leaked session — equivalent to handing your password to whoever picks it up
+- **Detect expiry early, fail loud.** The first thing every run does after `new_context` is load a
+  cheap authenticated page (the home feed, an account-settings URL) and check whether the URL
+  redirected to `/login` or `/authwall`. If it did, exit with a "re-run setup_auth.py" message
+  rather than silently scraping a logged-out shell
+
+```python
+# every run, immediately after loading state
+page.goto("https://target.com/home")
+if "/login" in page.url or "/authwall" in page.url:
+    raise SystemExit("Session expired — re-run setup_auth.py")
+```
+
+That's the entire session-management story. Two scripts, one JSON file, three states.
+
 ## Probing what the agent can actually see
 
 Before automating the loop, I wanted to know:
