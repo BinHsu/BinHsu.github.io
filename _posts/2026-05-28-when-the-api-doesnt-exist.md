@@ -162,6 +162,131 @@ if "/login" in page.url or "/authwall" in page.url:
 
 That's the entire session-management story. Two scripts, one JSON file, three states.
 
+## The skeleton, end to end
+
+Six moving parts. Fits on a napkin:
+
+```
++--------------+    +----------------+    +------------------+    +---------------+
+|  Schedule    | -> |    Probes      | -> |    Local data    | -> |    Output     |
+|  launchd /   |    |  one .py per   |    |  applications.md |    |  digest .md   |
+|  cron / unit |    |  source site   |    |  (durable tracker)|   |  per day      |
++--------------+    +----------------+    +------------------+    +---------------+
+```
+
+In the file system:
+
+```
+~/job-loop/
+├── auth.json                # storage_state — chmod 600, gitignored
+├── setup_auth.py            # one-time, headed login per site
+├── probes/
+│   ├── source_a.py
+│   └── source_b.py
+├── orchestrator.py          # runs probes, dedups, writes digest
+├── data/
+│   ├── applications.md      # my durable tracker
+│   └── digests/
+│       └── YYYY-MM-DD.md
+└── .gitignore               # auth.json, data/, *.png
+```
+
+What goes where, briefly:
+
+| Thing                | Where                    | Why there                                                |
+|----------------------|--------------------------|----------------------------------------------------------|
+| Saved auth state     | `auth.json`              | One file → one thing to `chmod` + gitignore              |
+| Per-site scrapers    | `probes/*.py`            | One file per source; easy to add, remove, debug          |
+| Dedup tracker        | `data/applications.md`   | Markdown is human-readable, git-friendly, no DB needed   |
+| Daily output         | `data/digests/<date>.md` | Plain text, scannable in any editor, archivable          |
+| Orchestrator         | `orchestrator.py`        | Top-level "run all probes, dedup, write digest"          |
+| Trigger              | launchd plist / cron     | OS-native, survives reboot, no third-party scheduler     |
+
+That's the whole architecture. No service to deploy, no database to maintain, no API key to rotate.
+
+## Walking it through with Claude Code as the agent
+
+The whole loop is buildable in an afternoon if you have a coding agent sitting in the project directory.
+The order I'd use with Claude Code (or any agent with shell + file edit permissions):
+
+**Pre-flight:**
+
+```sh
+mkdir ~/job-loop && cd ~/job-loop
+python3 -m venv .venv
+.venv/bin/pip install playwright
+.venv/bin/playwright install firefox
+```
+
+Open Claude Code in this directory. Allow `Bash`, `Read`, `Write`, `Edit`.
+
+**Step 1 — pair-program the manual-login script:**
+
+> Prompt: *"Write `setup_auth.py` for site X. Open headed Firefox, navigate to its login page,
+> wait for user input, save `storage_state` to `auth.json`, `chmod 600` the file."*
+
+Claude writes the file. You review, run it headed, log in by hand, the JSON lands on disk.
+
+**Step 2 — verify the auth survives across runs:**
+
+> Prompt: *"Write a 10-line probe that loads site X's home feed using `auth.json`,
+> screenshots the result, and prints the final URL.
+> Make sure the headless run lands on `/feed`, not `/login`."*
+
+Run it, eyeball the screenshot, confirm the URL. This is where the probe ladder
+in the next section actually happens — once per new site.
+
+**Step 3 — build one probe per source:**
+
+> Prompt: *"Write `probes/source_a.py`: load the recommendations URL,
+> extract each card's title, company, location, posted date. Print JSON to stdout.
+> Use `get_by_role` and `get_by_text` — no class-hash selectors."*
+
+Claude reads the page once (via a headed run) to find stable selectors,
+writes the probe, iterates with you on the inevitable DOM weirdness.
+Repeat per site.
+
+**Step 4 — orchestrate:**
+
+> Prompt: *"Write `orchestrator.py`: run every probe in `probes/`,
+> dedup their JSON against `data/applications.md`,
+> write new findings to `data/digests/YYYY-MM-DD.md` with a 3-line summary at the top."*
+
+Run it manually for a few mornings before scheduling.
+Iterate on the digest format until it reads how you want over coffee.
+
+**Step 5 — schedule it (Mac launchd example):**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.binhsu.jobloop</string>
+  <key>ProgramArguments</key><array>
+    <string>/Users/binhsu/job-loop/.venv/bin/python</string>
+    <string>/Users/binhsu/job-loop/orchestrator.py</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>7</integer><key>Minute</key><integer>30</integer></dict>
+  <key>StandardOutPath</key>
+  <string>/Users/binhsu/job-loop/data/digests/launchd.log</string>
+</dict></plist>
+```
+
+Save to `~/Library/LaunchAgents/com.binhsu.jobloop.plist`, then `launchctl load <path>`.
+Linux: equivalent systemd timer or a cron entry. Windows: Task Scheduler. Same pattern.
+
+**Division of labour:**
+
+| You write or judge                                | The agent writes              |
+|---------------------------------------------------|-------------------------------|
+| The `.gitignore` (which paths are sensitive)      | The probes                    |
+| The manual login (you type the password yourself) | The orchestrator              |
+| The dedup schema (what counts as "same posting")  | The launchd plist             |
+| Review every commit before push                   | The digest formatter          |
+| Run any new probe headed once before headless     |                               |
+
+The agent does the typing. You do the judging.
+
 ## Probing what the agent can actually see
 
 Before automating the loop, I wanted to know:
@@ -239,18 +364,13 @@ Once I framed it that way, several decisions got obvious:
 
 ## What it does for me, now
 
-The current loop:
+The result: 90 minutes a day of scanning, deduplicating, and triaging dropped
+to a 5-minute review over coffee.
+The digest lands at `~/Documents/job-digest/<date>.md` every morning at 7:30.
 
-1. A cron-style trigger at 7:30 in the morning
-2. A fresh Playwright context carries my `storage_state` in
-3. The agent visits each target surface and captures structured data
-4. It compares results against my local applications tracker (a Markdown table in a Git repo)
-5. It writes a daily digest: new postings + dedup status + a match score against my profile
-6. The digest lands at `~/Documents/job-digest/<date>.md` for me to scan over coffee
-
-90 minutes a day reduced to a 5-minute review.
-The agent does not apply for anything — applying is a judgement layer I keep manual.
-It scouts.
+The agent doesn't apply for anything.
+Applying is a judgement layer I keep manual.
+The agent scouts; I decide.
 
 ## Where I'd take this next
 
