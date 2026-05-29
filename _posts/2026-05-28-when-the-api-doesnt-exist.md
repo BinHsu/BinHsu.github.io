@@ -15,6 +15,9 @@ For one of those — my own job search — I built an agent that does the mornin
 It cut roughly 90 minutes a day to about 5 minutes of review over coffee.
 Here is what worked, where the boundaries actually are, and what I think this pattern is good for.
 
+> Companion piece: [Webwright setup and how agents meet the real world](/webwright-setup-and-how-agents-meet-the-real-world/),
+> which is the install + craft side of the same loop.
+
 ## The pain, exactly
 
 I look at five surfaces every day: my personalised recommendations on a major professional network,
