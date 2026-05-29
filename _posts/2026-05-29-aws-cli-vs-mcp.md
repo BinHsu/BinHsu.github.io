@@ -1,7 +1,7 @@
 ---
 title: "AWS CLI or AWS MCP?"
 subtitle: "What AWS shipped, a hands-on install you can reproduce, and where the new trust boundary sits"
-date: 2026-05-29
+date: 2026-05-29 10:00:00
 tags: [aws, mcp, agents, devsecops]
 asset_path: /assets/img/posts/2026-05-29-aws-cli-vs-mcp
 thumbnail-img: /assets/img/posts/2026-05-29-aws-cli-vs-mcp/diagram.png
