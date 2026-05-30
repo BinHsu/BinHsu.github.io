@@ -67,6 +67,8 @@ Port's tiers at a glance — a snapshot pulled on 2026-05-30:
 
 The Free plan already includes unlimited data sources, catalog pages and AI agents — enough to prove the loop before you pay a cent. (Generous on purpose: it's the land-and-expand funnel from the caveat above.)
 
+**Why Port and not the hotter Backstage?** Backstage is the name everyone reaches for — the CNCF darling, the default answer. But re-read what this whole post is about: Jenkins-as-IDP hurt because you were *maintaining a platform*. Backstage is another platform you build and maintain — a React/Node app, a plugin tree, a dependency treadmill. Default to it and you've swapped one maintenance burden for a trendier one. Port earns the default for most teams precisely because it deletes that burden: managed core, a catalog that builds itself, no app to keep alive. Reach for Backstage only when you genuinely need to *own* the control plane and have a platform team to keep it breathing — not because it's the one on everyone's slides.
+
 The migration posture is strangler-fig: stand the control plane in front, move the highest-traffic self-service actions to it (backed by the GHA workflows you already have), and let "Jenkins-as-IDP" thinking fall away one job at a time.
 
 ## The one line to keep
