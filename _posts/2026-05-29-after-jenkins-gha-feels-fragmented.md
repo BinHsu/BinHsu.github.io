@@ -2,7 +2,7 @@
 title: "After Jenkins, GitHub Actions feels fragmented"
 subtitle: "The thing you miss isn't Jenkins — it's a single control plane"
 date: 2026-05-29 08:00:00
-tags: [cicd, jenkins, github-actions, platform-engineering]
+tags: [cicd, jenkins, github-actions, platform-engineering, port]
 asset_path: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented
 thumbnail-img: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented/diagram.png
 share-img: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented/diagram.png
@@ -53,6 +53,17 @@ In order of effort:
 1. **Use GHA's own structure first.** Org-level reusable + starter workflows, repository templates, `workflow_dispatch` for self-service, CODEOWNERS for ownership. Many teams stop here — and should, until the pain is real.
 2. **Add a control plane when you've outgrown that.** [Port](https://www.port.io) is the shortest path: it auto-builds a catalog from your repos and triggers your existing workflows via `workflow_dispatch` — the execution layer doesn't move. Its free tier is unusually generous (15 seats, 10k entities, unlimited data sources and catalog pages), so you can prove the whole loop at zero cost. Be clear-eyed about the trade, though: Port's edge agents are open source, but its core is a closed, hosted SaaS — the generous free tier is land-and-expand, and what you buy long-term is lock-in. **Backstage** is the same control-plane idea if you'd rather own it than rent it — you swap the lock-in for the maintenance.
 3. **Know what your suite does and doesn't do.** If you're on Atlassian, **Compass observes GHA (catalog + scorecards from build/deploy metrics) but cannot trigger it** — its only scaffolding feature was removed at the end of 2025. It's a governance layer, not a self-service portal over GHA.
+
+Port's tiers at a glance (as of 2026-05-30 — [check current](https://www.port.io/pricing)):
+
+| Plan | Price | Seats | Entities |
+|---|---|---|---|
+| **Free** | **$0** | up to 15 | up to 10k |
+| Basic | $30 / seat / mo | up to 50 | up to 50k |
+| Standard | $40 / seat / mo | up to 200 | up to 250k |
+| Enterprise | Custom | Custom | 1M+ |
+
+The Free plan already includes unlimited data sources, catalog pages and AI agents — enough to prove the loop before you pay a cent. (Generous on purpose: it's the land-and-expand funnel from the caveat above.)
 
 The migration posture is strangler-fig: stand the control plane in front, move the highest-traffic self-service actions to it (backed by the GHA workflows you already have), and let "Jenkins-as-IDP" thinking fall away one job at a time.
 
