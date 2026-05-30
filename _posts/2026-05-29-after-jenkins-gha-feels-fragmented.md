@@ -54,7 +54,7 @@ In order of effort:
 2. **Add a control plane when you've outgrown that.** [Port](https://www.port.io) is the shortest path: it auto-builds a catalog from your repos and triggers your existing workflows via `workflow_dispatch` — the execution layer doesn't move. Its free tier is unusually generous (15 seats, 10k entities, unlimited data sources and catalog pages), so you can prove the whole loop at zero cost. Be clear-eyed about the trade, though: Port's edge agents are open source, but its core is a closed, hosted SaaS — the generous free tier is land-and-expand, and what you buy long-term is lock-in. **Backstage** is the same control-plane idea if you'd rather own it than rent it — you swap the lock-in for the maintenance.
 3. **Know what your suite does and doesn't do.** If you're on Atlassian, **Compass observes GHA (catalog + scorecards from build/deploy metrics) but cannot trigger it** — its only scaffolding feature was removed at the end of 2025. It's a governance layer, not a self-service portal over GHA.
 
-Port's tiers at a glance (as of 2026-05-30 — [check current](https://www.port.io/pricing)):
+Port's tiers at a glance — a snapshot pulled on 2026-05-30:
 
 | Plan | Price | Seats | Entities |
 |---|---|---|---|
@@ -62,6 +62,8 @@ Port's tiers at a glance (as of 2026-05-30 — [check current](https://www.port.
 | Basic | $30 / seat / mo | up to 50 | up to 50k |
 | Standard | $40 / seat / mo | up to 200 | up to 250k |
 | Enterprise | Custom | Custom | 1M+ |
+
+*Pricing moves — this is a same-day snapshot. Always treat the [official Port pricing page](https://www.port.io/pricing) as the source of truth going forward.*
 
 The Free plan already includes unlimited data sources, catalog pages and AI agents — enough to prove the loop before you pay a cent. (Generous on purpose: it's the land-and-expand funnel from the caveat above.)
 
