@@ -32,6 +32,12 @@ Prerequisites: a Pro or Max plan signed in through claude.ai (API keys aren't su
 3. **Get the app and connect.** No app yet? Run `/mobile` in the session to show a download QR. Sign in with the **same** account, then scan the session QR — or open the printed URL in any browser.
 4. **Verify it works.** In the app, open the **Code** tab: your session shows a computer icon with a **green dot**. Send a test message like `hello from phone`. It lands in your terminal session and the agent replies — *as long as the local session is idle*; you can't submit a new prompt while it's mid-turn. (That "can't send while busy" surprised me at first — it's not a bug.)
 
+<div style="text-align:center;margin:24px 0">
+  <img src="/assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone/app-code-tab.png" alt="The Code tab in the Claude mobile app navigation" style="max-width:220px;border-radius:14px;border:1px solid #e1e4e8;margin:0 10px;vertical-align:middle">
+  <img src="/assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone/app-session-connected.png" alt="A local session showing a green Connected status in the Code list" style="max-width:430px;border-radius:14px;border:1px solid #e1e4e8;margin:0 10px;vertical-align:middle">
+  <div style="color:#6a737d;font-size:0.9em;margin-top:8px">Left: the <strong>Code</strong> tab in the Claude app. Right: a local session reporting <strong>Connected</strong>.</div>
+</div>
+
 ## DevSecOps: the perimeter moved to your identity
 
 No inbound port means the obvious attack — scan the machine, connect to the port — is gone. So an attacker can't break the wire. They go after the thing that *can* reach your session: **your account**. The perimeter stopped being your network and became your identity.
