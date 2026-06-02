@@ -42,6 +42,11 @@ Prerequisites: a Pro or Max plan signed in through claude.ai (API keys aren't su
 
 No inbound port means the obvious attack — scan the machine, connect to the port — is gone. So an attacker can't break the wire. They go after the thing that *can* reach your session: **your account**. The perimeter stopped being your network and became your identity.
 
+<div style="text-align:center;margin:24px 0">
+  <img src="/assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone/app-agent-work.png" alt="A connected session's task list from the phone: merge a PR, wire up a deploy key, set a budget-alert email" style="max-width:440px;border-radius:14px;border:1px solid #e1e4e8">
+  <div style="color:#6a737d;font-size:0.9em;margin-top:8px">What it actually drives from your phone: merge a PR, wire up a deploy key, set a budget-alert email — GitOps, DevSecOps, and FinOps in one message. That capability is the stake: hold the channel, and all of it is yours to direct.</div>
+</div>
+
 There's a second, sharper problem. In a terminal, the permission prompt is an independent check: even if a prompt talks the agent into `rm -rf` or exfiltrating a file, a human approves at a trusted keyboard. Remote Control lets you **approve from the same phone you send from**. Issuing the command and approving it now live on one channel. Compromise the channel and you get both — the human gate collapses into the attacker's hands.
 
 ![An attacker holding a phone drives your Claude session through your account past a broken padlock, digging treasure — your SSH keys, tokens, and repo — out of your own machine.](/assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone/hold-the-channel.png)
