@@ -25,15 +25,12 @@ The transport is the reassuring part: your machine makes **outbound HTTPS only a
 Prerequisites: a Pro or Max plan signed in through claude.ai (API keys aren't supported), and Claude Code v2.1.51 or later.
 
 1. **Check the basics.** Run `claude --version` (need ≥ 2.1.51). If you're not signed in through claude.ai, run `/login` and choose the claude.ai option. Run `claude` once in your project directory to accept the workspace-trust prompt.
-2. **Start a controllable session.** In your project directory:
-   ```bash
-   claude remote-control
-   ```
-   It stays running and prints a session URL. Press **spacebar** to show a QR code.
+2. **Turn on Remote Control — pick the path that fits:**
+   - *Fresh start (clean session):* in your project directory, run `claude remote-control`. It runs in server mode — stays alive, prints a session URL, and shows a QR code when you press **spacebar**. (Want a normal interactive session with control already on? Start it with `claude --remote-control`.)
+   - *Already mid-session:* type `/remote-control` to register the session you're already in — no restart, no lost context.
+   - *Every session, automatically:* `/config` → set **Enable Remote Control for all sessions** to true. Convenient — and exactly the exposure the DevSecOps section is about.
 3. **Get the app and connect.** No app yet? Run `/mobile` in the session to show a download QR. Sign in with the **same** account, then scan the session QR — or open the printed URL in any browser.
-4. **Verify it works.** In the app, open the **Code** tab: your session shows a computer icon with a **green dot**. Send a test message like `hello from phone`. It lands in your terminal session and the agent replies — *as long as the local session is idle*; you can't submit a new prompt while it's mid-turn. (That "can't send while busy" surprised me first — it's not a bug.)
-
-Prefer always-on? `/config` → set **Enable Remote Control for all sessions** to true, and every interactive session auto-registers. Convenient — and exactly the exposure the next section is about.
+4. **Verify it works.** In the app, open the **Code** tab: your session shows a computer icon with a **green dot**. Send a test message like `hello from phone`. It lands in your terminal session and the agent replies — *as long as the local session is idle*; you can't submit a new prompt while it's mid-turn. (That "can't send while busy" surprised me at first — it's not a bug.)
 
 ## DevSecOps: the perimeter moved to your identity
 
