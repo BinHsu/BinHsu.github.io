@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#f4f5f7"/>
+  <text x="600" y="56" text-anchor="middle" font-size="34" font-weight="700" fill="#172b4d">Same session, two places</text>
+
+  <!-- ============ LEFT: tethered to the terminal ============ -->
+  <g>
+    <!-- terminal -->
+    <rect x="250" y="150" width="220" height="150" rx="10" fill="#0b1320" stroke="#172b4d" stroke-width="3"/>
+    <rect x="350" y="300" width="20" height="34" fill="#172b4d"/>
+    <rect x="320" y="334" width="80" height="12" rx="4" fill="#172b4d"/>
+    <rect x="266" y="170" width="120" height="9" rx="4" fill="#36b37e"/>
+    <rect x="266" y="190" width="170" height="9" rx="4" fill="#36b37e" opacity="0.8"/>
+    <rect x="266" y="210" width="90" height="9" rx="4" fill="#36b37e" opacity="0.8"/>
+    <rect x="266" y="234" width="14" height="16" fill="#f2a900"/>
+
+    <!-- haggard person -->
+    <circle cx="135" cy="178" r="30" fill="#ffd9b3" stroke="#172b4d" stroke-width="3"/>
+    <!-- worried brows + frown -->
+    <path d="M122 170 l12 5 M148 170 l-12 5" stroke="#172b4d" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="127" cy="180" r="2.5" fill="#172b4d"/><circle cx="143" cy="180" r="2.5" fill="#172b4d"/>
+    <path d="M126 196 q9 -7 18 0" stroke="#172b4d" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- sweat -->
+    <path d="M168 168 q6 10 0 16 q-6 -6 0 -16" fill="#2bb3a3"/>
+    <path d="M100 172 q6 10 0 16 q-6 -6 0 -16" fill="#2bb3a3"/>
+    <!-- body + reaching arm to keyboard -->
+    <path d="M135 208 q-30 6 -32 70 l64 0 q-2 -64 -32 -70 z" fill="#0052cc" stroke="#172b4d" stroke-width="3"/>
+    <path d="M160 232 q60 8 96 96" stroke="#172b4d" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- chained ankle -->
+    <line x1="120" y1="278" x2="120" y2="320" stroke="#172b4d" stroke-width="6" stroke-linecap="round"/>
+    <g fill="none" stroke="#7a869a" stroke-width="4">
+      <circle cx="120" cy="330" r="7"/><circle cx="150" cy="338" r="7"/><circle cx="180" cy="344" r="7"/><circle cx="210" cy="346" r="7"/>
+    </g>
+    <!-- unreachable WC -->
+    <rect x="40" y="150" width="56" height="44" rx="6" fill="#fff" stroke="#172b4d" stroke-width="3"/>
+    <text x="68" y="179" text-anchor="middle" font-size="22" font-weight="700" fill="#172b4d">WC</text>
+    <path d="M96 200 q30 40 30 70" stroke="#d64545" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
+    <line x1="104" y1="232" x2="118" y2="246" stroke="#d64545" stroke-width="4"/><line x1="118" y1="232" x2="104" y2="246" stroke="#d64545" stroke-width="4"/>
+    <text x="252" y="400" text-anchor="middle" font-size="20" font-weight="600" fill="#172b4d">Stuck at the terminal.</text>
+    <text x="252" y="426" text-anchor="middle" font-size="20" font-weight="600" fill="#172b4d">Can't even step away.</text>
+  </g>
+
+  <!-- ============ ARROW ============ -->
+  <g>
+    <text x="600" y="180" text-anchor="middle" font-size="19" font-weight="700" fill="#0052cc">Remote Control</text>
+    <line x1="520" y1="220" x2="680" y2="220" stroke="#0052cc" stroke-width="10" stroke-linecap="round"/>
+    <path d="M676 200 l30 20 l-30 20 z" fill="#0052cc"/>
+  </g>
+
+  <!-- ============ RIGHT: free, on phone ============ -->
+  <g>
+    <!-- laptop still running on the desk -->
+    <rect x="760" y="300" width="120" height="74" rx="6" fill="#0b1320" stroke="#172b4d" stroke-width="3"/>
+    <rect x="744" y="374" width="152" height="12" rx="4" fill="#172b4d"/>
+    <circle cx="820" cy="318" r="6" fill="#36b37e"/>
+    <text x="820" y="400" text-anchor="middle" font-size="14" font-weight="600" fill="#7a869a">runs here</text>
+    <!-- wireless arc to phone -->
+    <path d="M884 300 q90 -120 150 -70" stroke="#2bb3a3" stroke-width="4" stroke-dasharray="7 7" fill="none"/>
+
+    <!-- relaxed person -->
+    <circle cx="1010" cy="150" r="30" fill="#ffd9b3" stroke="#172b4d" stroke-width="3"/>
+    <circle cx="1002" cy="148" r="2.6" fill="#172b4d"/><circle cx="1018" cy="148" r="2.6" fill="#172b4d"/>
+    <path d="M999 160 q11 9 22 0" stroke="#172b4d" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M1010 180 q-32 6 -34 96 l68 0 q-2 -90 -34 -96 z" fill="#2bb3a3" stroke="#172b4d" stroke-width="3"/>
+    <!-- arm holding phone -->
+    <path d="M983 214 q-40 6 -44 40" stroke="#172b4d" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <rect x="918" y="246" width="40" height="70" rx="8" fill="#172b4d"/>
+    <rect x="924" y="254" width="28" height="46" rx="3" fill="#0b1320"/>
+    <rect x="928" y="260" width="20" height="6" rx="3" fill="#36b37e"/>
+    <rect x="928" y="272" width="14" height="6" rx="3" fill="#36b37e" opacity="0.7"/>
+    <!-- chat bubble -->
+    <rect x="876" y="214" width="60" height="34" rx="8" fill="#fff" stroke="#172b4d" stroke-width="2.5"/>
+    <path d="M906 248 l8 10 l8 -10 z" fill="#fff" stroke="#172b4d" stroke-width="2.5"/>
+    <text x="906" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#0052cc">deploy ✓</text>
+
+    <text x="960" y="466" text-anchor="middle" font-size="20" font-weight="600" fill="#172b4d">Drive it from your phone —</text>
+    <text x="960" y="492" text-anchor="middle" font-size="20" font-weight="600" fill="#172b4d">it still runs on your machine.</text>
+  </g>
+</svg>
