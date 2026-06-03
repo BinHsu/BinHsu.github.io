@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="630" fill="#f1f5f9"/>
+
+  <!-- title -->
+  <text x="600" y="86" text-anchor="middle" font-size="42" font-weight="700" fill="#0f172a">When &#8220;Show transcript&#8221; is empty</text>
+
+  <!-- card -->
+  <rect x="48" y="128" width="1104" height="360" rx="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- ============ Stage 1: video, captions off ============ -->
+  <rect x="118" y="190" width="234" height="150" rx="14" fill="#0f172a"/>
+  <!-- play button -->
+  <circle cx="235" cy="258" r="36" fill="#ffffff" fill-opacity="0.16"/>
+  <polygon points="223,240 223,276 253,258" fill="#ffffff"/>
+  <!-- CC badge, struck through -->
+  <rect x="132" y="306" width="50" height="26" rx="5" fill="#334155"/>
+  <text x="157" y="325" text-anchor="middle" font-size="16" font-weight="700" fill="#cbd5e1">CC</text>
+  <line x1="126" y1="334" x2="188" y2="304" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+  <text x="235" y="392" text-anchor="middle" font-size="27" font-weight="600" fill="#334155">captions off</text>
+
+  <!-- arrow 1 -->
+  <line x1="372" y1="258" x2="520" y2="258" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="520,246 546,258 520,270" fill="#94a3b8"/>
+
+  <!-- ============ Stage 2: local audio waveform ============ -->
+  <g fill="#2563eb">
+    <rect x="540" y="238" width="13" height="40" rx="6"/>
+    <rect x="563" y="216" width="13" height="84" rx="6"/>
+    <rect x="586" y="190" width="13" height="136" rx="6"/>
+    <rect x="609" y="226" width="13" height="64" rx="6"/>
+    <rect x="632" y="184" width="13" height="148" rx="6"/>
+    <rect x="655" y="232" width="13" height="52" rx="6"/>
+    <rect x="678" y="204" width="13" height="108" rx="6"/>
+  </g>
+  <text x="616" y="392" text-anchor="middle" font-size="27" font-weight="600" fill="#334155">transcribe locally</text>
+
+  <!-- arrow 2 -->
+  <line x1="722" y1="258" x2="858" y2="258" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="858,246 884,258 858,270" fill="#94a3b8"/>
+
+  <!-- ============ Stage 3: transcript page ============ -->
+  <rect x="884" y="178" width="196" height="172" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <g fill="#cbd5e1">
+    <rect x="908" y="202" width="148" height="9" rx="4.5"/>
+    <rect x="908" y="222" width="120" height="9" rx="4.5"/>
+    <rect x="908" y="262" width="148" height="9" rx="4.5"/>
+    <rect x="908" y="282" width="100" height="9" rx="4.5"/>
+    <rect x="908" y="322" width="132" height="9" rx="4.5"/>
+  </g>
+  <rect x="908" y="242" width="90" height="9" rx="4.5" fill="#2563eb"/>
+  <rect x="908" y="302" width="60" height="9" rx="4.5" fill="#2563eb"/>
+  <text x="982" y="392" text-anchor="middle" font-size="27" font-weight="600" fill="#334155">read it</text>
+
+  <!-- footer wordmark -->
+  <text x="600" y="556" text-anchor="middle" font-size="24" fill="#64748b">aegis-yt-transcriber &#8212; local YouTube-to-text, captions-first</text>
+</svg>
