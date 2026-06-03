@@ -10,7 +10,7 @@ share-img: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-tr
 
 I wanted to read *[Beyond the basics with Claude Code](https://www.youtube.com/watch?v=tuY2ChJIx48)*, not watch it twice. It was Daisy Hollman's YouTube talk about working with AI agents at scale — a good one. I'd watched it once; I wanted the text so I could pull quotes and think against it. I clicked **Show transcript**. Nothing. Captions were off.
 
-So I did the obvious thing and built a small tool to turn the URL into text. There's a loop here I enjoy: I used an agent to build a tool to read a talk about using agents. The tool is small. The story is in two design calls.
+So I did the obvious thing and built a small tool to turn the URL into text — **[aegis-yt-transcriber](https://github.com/BinHsu/aegis-yt-transcriber)**, MIT and on GitHub. There's a loop here I enjoy: I used an agent to build a tool to read a talk about using agents. The tool is small. The story is in two design calls.
 
 ![Left: a video frame with its CC badge crossed out — captions disabled. Right: a clean transcript page. In between, an audio waveform: when the captions are gone, transcribe the sound locally.](/assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber/captions-to-transcript.png)
 
@@ -18,7 +18,7 @@ So I did the obvious thing and built a small tool to turn the URL into text. The
 
 My first instinct was the official YouTube Data API. It has a `captions` endpoint, so this should be a five-minute job. It isn't. `captions.download` only works for videos **you own** — you authenticate as the uploader. There's no official way to pull captions off an arbitrary public video. That's deliberate, and it's a wall.
 
-I've [hit this wall before](https://binhsu.org/when-the-api-doesnt-exist/): the official API is the front door, and the front door is locked for this. The route that works is the same `timedtext` track YouTube's own player reads. `yt-dlp` already speaks it — `--write-subs` for human-written captions, `--write-auto-subs` for the auto-generated ones. It's unofficial, so it can break when YouTube changes the player, but it's the only thing that actually answers the question.
+I've [hit this wall before](/when-the-api-doesnt-exist/): the official API is the front door, and the front door is locked for this. The route that works is the same `timedtext` track YouTube's own player reads. `yt-dlp` already speaks it — `--write-subs` for human-written captions, `--write-auto-subs` for the auto-generated ones. It's unofficial, so it can break when YouTube changes the player, but it's the only thing that actually answers the question.
 
 ## Second call: don't transcribe what's already written
 
