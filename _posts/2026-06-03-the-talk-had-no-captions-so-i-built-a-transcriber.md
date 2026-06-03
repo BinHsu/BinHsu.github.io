@@ -1,7 +1,7 @@
 ---
 title: "The talk had no captions, so I built a transcriber"
 subtitle: "A local YouTube-to-text tool — captions when they exist, Whisper when they don't. Built to read one talk about working with AI agents."
-date: 2026-06-03 14:00:00
+date: 2026-06-03 09:00:00
 tags: [claude-code, agents, whisper, yt-dlp, python]
 asset_path: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber
 thumbnail-img: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber/captions-to-transcript.png
