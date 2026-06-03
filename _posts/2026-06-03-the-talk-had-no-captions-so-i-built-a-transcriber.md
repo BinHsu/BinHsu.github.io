@@ -8,7 +8,7 @@ thumbnail-img: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-
 share-img: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber/captions-to-transcript.png
 ---
 
-I wanted to read a [YouTube talk](https://www.youtube.com/watch?v=tuY2ChJIx48), not watch it twice. It was Daisy Hollman's *Beyond the basics with Claude Code* — a good one about working with AI agents at scale. I'd watched it once; I wanted the text so I could pull quotes and think against it. I clicked **Show transcript**. Nothing. Captions were off.
+I wanted to read *[Beyond the basics with Claude Code](https://www.youtube.com/watch?v=tuY2ChJIx48)*, not watch it twice. It was Daisy Hollman's YouTube talk about working with AI agents at scale — a good one. I'd watched it once; I wanted the text so I could pull quotes and think against it. I clicked **Show transcript**. Nothing. Captions were off.
 
 So I did the obvious thing and built a small tool to turn the URL into text. There's a loop here I enjoy: I used an agent to build a tool to read a talk about using agents. The tool is small. The story is in two design calls.
 
