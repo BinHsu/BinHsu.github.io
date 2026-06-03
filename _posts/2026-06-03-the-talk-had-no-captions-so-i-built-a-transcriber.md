@@ -1,5 +1,5 @@
 ---
-title: "The talk had no captions, so I built a transcriber"
+title: "The YouTube talk had no captions, so I built a transcriber"
 subtitle: "A local YouTube-to-text tool — captions when they exist, Whisper when they don't. Built to read one talk about working with AI agents."
 date: 2026-06-03 09:00:00
 tags: [claude-code, agents, whisper, yt-dlp, python]
