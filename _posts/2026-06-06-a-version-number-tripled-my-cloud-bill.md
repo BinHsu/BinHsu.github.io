@@ -1,7 +1,7 @@
 ---
 title: "A version number tripled my cloud bill — and only a machine caught it"
 subtitle: "I had seven guardrails against exactly this. Six were written rules. One was enforced by a machine — and it was the only one that fired."
-date: 2026-06-06 20:00:00
+date: 2026-06-06 09:00:00
 tags: [aws, eks, finops, gitops, postmortem]
 asset_path: /assets/img/posts/2026-06-06-a-version-number-tripled-my-cloud-bill
 thumbnail-img: /assets/img/posts/2026-06-06-a-version-number-tripled-my-cloud-bill/seven-guardrails-one-fired.png
