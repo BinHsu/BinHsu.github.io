@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#0d1117"/>
+
+  <text x="600" y="78" text-anchor="middle" fill="#e6edf3" font-size="54" font-weight="700">Seven guardrails. One fired.</text>
+  <text x="600" y="120" text-anchor="middle" fill="#8b949e" font-size="23">Six were rules I had to follow. One was enforced by a machine.</text>
+
+  <!-- Layer A: operator-discipline (written rules) — six, greyed, failed -->
+  <text x="60" y="178" fill="#6e7681" font-size="18" font-weight="600" letter-spacing="1">OPERATOR DISCIPLINE &#8212; WRITTEN RULES</text>
+
+  <!-- card template: w=160 gap=24, x = 60,244,428,612,796,980 ; y=196 h=150 -->
+  <g fill="#161b22" stroke="#30363d" stroke-width="1.5">
+    <rect x="60"  y="196" width="160" height="150" rx="12"/>
+    <rect x="244" y="196" width="160" height="150" rx="12"/>
+    <rect x="428" y="196" width="160" height="150" rx="12"/>
+    <rect x="612" y="196" width="160" height="150" rx="12"/>
+    <rect x="796" y="196" width="160" height="150" rx="12"/>
+    <rect x="980" y="196" width="160" height="150" rx="12"/>
+  </g>
+  <g fill="#f85149" font-size="34" text-anchor="middle" font-weight="700">
+    <text x="140" y="252">&#10007;</text>
+    <text x="324" y="252">&#10007;</text>
+    <text x="508" y="252">&#10007;</text>
+    <text x="692" y="252">&#10007;</text>
+    <text x="876" y="252">&#10007;</text>
+    <text x="1060" y="252">&#10007;</text>
+  </g>
+  <g fill="#8b949e" font-size="17" text-anchor="middle">
+    <text x="140" y="296">Destroy on</text><text x="140" y="318">failed apply</text>
+    <text x="324" y="296">Tear down</text><text x="324" y="318">after verify</text>
+    <text x="508" y="296">Apply-time</text><text x="508" y="318">cost estimate</text>
+    <text x="692" y="296">CI-green</text><text x="692" y="318">discipline</text>
+    <text x="876" y="296">kyverno</text><text x="876" y="318">teardown</text>
+    <text x="1060" y="296">OIDC</text><text x="1060" y="318">teardown</text>
+  </g>
+
+  <!-- Layer B: machine-enforced — one, highlighted, fired -->
+  <text x="60" y="408" fill="#3fb950" font-size="18" font-weight="600" letter-spacing="1">MACHINE-ENFORCED</text>
+  <rect x="60" y="426" width="1080" height="120" rx="14" fill="#0f2417" stroke="#238636" stroke-width="2"/>
+  <text x="116" y="500" fill="#3fb950" font-size="46" font-weight="700" text-anchor="middle">&#10003;</text>
+  <text x="172" y="478" fill="#e6edf3" font-size="26" font-weight="700">AWS Budgets alarm</text>
+  <text x="172" y="510" fill="#8b949e" font-size="20">The only guardrail a machine enforced &#8212; and the only one that fired. Caught it at $29, not $400.</text>
+
+  <text x="600" y="600" text-anchor="middle" fill="#484f58" font-size="18">A written rule is a request. Enforcement is a guarantee.  &#183;  binhsu.github.io</text>
+</svg>
