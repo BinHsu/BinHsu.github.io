@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#0d1117"/>
+
+  <text x="60" y="68" fill="#e6edf3" font-size="44" font-weight="700">Harnessing an email agent</text>
+  <text x="60" y="104" fill="#8b949e" font-size="22">Four moves to make a <tspan fill="#f0883e" font-weight="600">hijacked</tspan> agent harmless</text>
+
+  <!-- header row -->
+  <text x="78"  y="168" fill="#6e7681" font-size="15" font-weight="600" letter-spacing="1">#</text>
+  <text x="150" y="168" fill="#6e7681" font-size="15" font-weight="600" letter-spacing="1">THE MOVE</text>
+  <text x="710" y="168" fill="#6e7681" font-size="15" font-weight="600" letter-spacing="1">WHY IT MATTERS</text>
+  <line x1="60" y1="182" x2="1140" y2="182" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- rows: y centers 232, 322, 412, 502 ; row height 90 -->
+  <g>
+    <circle cx="86" cy="226" r="17" fill="#1f6feb"/><text x="86" y="232" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">1</text>
+    <text x="150" y="222" fill="#e6edf3" font-size="20" font-weight="600">Tier by blast radius</text>
+    <text x="150" y="248" fill="#8b949e" font-size="16">read · send · delete are not one capability</text>
+    <text x="710" y="234" fill="#adbac7" font-size="17">read is the injection entry point</text>
+  </g>
+  <line x1="60" y1="272" x2="1140" y2="272" stroke="#21262d" stroke-width="1"/>
+  <g>
+    <circle cx="86" cy="316" r="17" fill="#1f6feb"/><text x="86" y="322" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">2</text>
+    <text x="150" y="312" fill="#e6edf3" font-size="20" font-weight="600">Narrow tools + a human gate</text>
+    <text x="150" y="338" fill="#8b949e" font-size="16">split the master tool; gate send &amp; delete</text>
+    <text x="710" y="324" fill="#adbac7" font-size="17">caps what it can reach</text>
+  </g>
+  <line x1="60" y1="362" x2="1140" y2="362" stroke="#21262d" stroke-width="1"/>
+  <g>
+    <circle cx="86" cy="406" r="17" fill="#1f6feb"/><text x="86" y="412" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">3</text>
+    <text x="150" y="402" fill="#e6edf3" font-size="20" font-weight="600">Scope the sender (IAM)</text>
+    <text x="150" y="428" fill="#8b949e" font-size="16">send-as a noreply bot, never the CEO</text>
+    <text x="710" y="414" fill="#adbac7" font-size="17">caps the damage it does</text>
+  </g>
+  <line x1="60" y1="452" x2="1140" y2="452" stroke="#21262d" stroke-width="1"/>
+  <g>
+    <circle cx="86" cy="496" r="17" fill="#238636"/><text x="86" y="502" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">4</text>
+    <text x="150" y="492" fill="#e6edf3" font-size="20" font-weight="600">Log every call + attribution</text>
+    <text x="150" y="518" fill="#8b949e" font-size="16">who/what did it — agent vs human</text>
+    <text x="710" y="504" fill="#adbac7" font-size="17">makes it traceable</text>
+  </g>
+  <line x1="60" y1="542" x2="1140" y2="542" stroke="#30363d" stroke-width="1.5"/>
+
+  <text x="60" y="582" fill="#6e7681" font-size="17"><tspan fill="#8b949e" font-weight="600">Prompt is advice. The mechanism is the rule.</tspan>  &#183;  built on Wisely Chen&#8217;s harness framing  &#183;  binhsu.github.io</text>
+</svg>
