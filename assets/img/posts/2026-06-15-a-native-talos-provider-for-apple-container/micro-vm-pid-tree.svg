@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#0d1117"/>
+
+  <text x="600" y="74" text-anchor="middle" fill="#e6edf3" font-size="50" font-weight="700">Inside one apple/container node</text>
+  <text x="600" y="116" text-anchor="middle" fill="#8b949e" font-size="23">One micro-VM per node &#8212; its own kernel, its own PID 1.</text>
+
+  <!-- micro-VM boundary -->
+  <rect x="60" y="156" width="620" height="412" rx="16" fill="#0d1b2a" stroke="#1f6feb" stroke-width="2"/>
+  <text x="84" y="190" fill="#58a6ff" font-size="18" font-weight="600" letter-spacing="1">MICRO-VM &#8212; KERNEL 6.18.15</text>
+
+  <!-- PID stack: nested boxes -->
+  <rect x="96" y="210" width="548" height="64" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="120" y="240" fill="#e6edf3" font-size="22" font-weight="700">vminitd</text>
+  <text x="120" y="262" fill="#8b949e" font-size="16">PID 1 &#8212; Apple's VM init, the only thing that starts</text>
+
+  <text x="128" y="300" fill="#6e7681" font-size="22">&#8595;</text>
+
+  <rect x="120" y="306" width="524" height="64" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="144" y="336" fill="#e6edf3" font-size="22" font-weight="700">machined</text>
+  <text x="144" y="358" fill="#8b949e" font-size="16">Talos PID 1-equivalent &#8212; applies the machine config</text>
+
+  <text x="152" y="396" fill="#6e7681" font-size="22">&#8595;</text>
+
+  <rect x="144" y="402" width="500" height="64" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="168" y="432" fill="#e6edf3" font-size="22" font-weight="700">kubelet</text>
+  <text x="168" y="454" fill="#8b949e" font-size="16">joins the cluster, runs the workload pods</text>
+
+  <text x="176" y="492" fill="#6e7681" font-size="22">&#8595;</text>
+
+  <rect x="168" y="498" width="476" height="48" rx="10" fill="#0f2417" stroke="#238636" stroke-width="1.5"/>
+  <text x="192" y="528" fill="#3fb950" font-size="20" font-weight="700">pods &#8212; coredns, flannel CNI, your apps</text>
+
+  <!-- right column: the recipe constraints -->
+  <text x="720" y="190" fill="#8b949e" font-size="18" font-weight="600" letter-spacing="1">WHAT THE RECIPE GETS RIGHT</text>
+
+  <rect x="720" y="210" width="420" height="80" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="744" y="244" fill="#e6edf3" font-size="20" font-weight="700">--cap-add ALL</text>
+  <text x="744" y="270" fill="#8b949e" font-size="16">= Docker's Privileged. machined dies on fsopen without it.</text>
+
+  <rect x="720" y="306" width="420" height="80" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="744" y="340" fill="#e6edf3" font-size="20" font-weight="700">/opt NOT on tmpfs</text>
+  <text x="744" y="366" fill="#8b949e" font-size="16">tmpfs would shadow the shipped /opt/cni/bin &#8594; CNI fails.</text>
+
+  <rect x="720" y="402" width="420" height="80" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="744" y="436" fill="#e6edf3" font-size="20" font-weight="700">control plane &#8805; 2 GiB</text>
+  <text x="744" y="462" fill="#8b949e" font-size="16">apiserver OOMs silently at 1 GiB &#8212; no crash, just gone.</text>
+
+  <rect x="720" y="498" width="420" height="48" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="744" y="528" fill="#8b949e" font-size="17">No host port-map. No USERDATA at create.</text>
+
+  <text x="600" y="600" text-anchor="middle" fill="#484f58" font-size="18">A micro-VM is not a container &#8212; the provider models the real boundary.  &#183;  binhsu.github.io</text>
+</svg>
