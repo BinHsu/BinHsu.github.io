@@ -8,6 +8,8 @@ thumbnail-img: /assets/img/posts/2026-06-19-aws-blocks-is-the-platform-team-you-
 share-img: /assets/img/posts/2026-06-19-aws-blocks-is-the-platform-team-you-dont-have/two-contexts.png
 ---
 
+> Companion piece: [Knative, ECS, and the cognitive load that won't disappear](/knative-ecs-cognitive-load/) — the same question from the serverless-containers angle: who carries the operator burden the abstraction hides.
+
 AWS shipped [Blocks](https://docs.aws.amazon.com/blocks/latest/devguide/what-is-blocks.html) —
 an infrastructure-from-code toolkit. You write a TypeScript backend, instantiate a
 `KVStore` here and a `Database` there, and Blocks derives the AWS infrastructure from
