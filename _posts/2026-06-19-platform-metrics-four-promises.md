@@ -100,6 +100,10 @@ has a money half (**FinOps**) and a human half (**operational toil and on-call**
 Cost and toil are the same failure in two currencies: a platform that scales by spending
 more dollars, or by spending more of its team's nights, is not scaling. It's deferring a bill.
 
+![All four families: meaning, what each metric measures, and the benchmark that matters]({{ page.asset_path }}/metrics-full.png)
+*The complete reference — save this one. Every metric above, with its meaning, what it
+measures, and (for DORA) the elite benchmark.*
+
 ## How to actually answer the interview question
 
 When they ask "how do you measure your platform," don't open the acronym fire-hose. Lead with
