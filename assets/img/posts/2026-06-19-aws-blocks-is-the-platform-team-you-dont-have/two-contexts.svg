@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="56" font-size="34" font-weight="700" fill="#1a202c">Where AWS Blocks fits</text>
+  <text x="60" y="88" font-size="20" fill="#4a5568">The axis is org shape &#215; cloud strategy &#8212; not technical sophistication.</text>
+
+  <!-- Grid cells -->
+  <!-- top-left: platform team + single-cloud -->
+  <rect x="170" y="120" width="480" height="200" rx="10" fill="#fffaf0" stroke="#dd6b20" stroke-width="2"/>
+  <text x="190" y="155" font-size="20" font-weight="700" fill="#9c4221">&#9888; Shadow infra</text>
+  <text x="190" y="184" font-size="17" fill="#744210">App teams derive infra outside</text>
+  <text x="190" y="208" font-size="17" fill="#744210">your control plane &#8212; the standard</text>
+  <text x="190" y="232" font-size="17" fill="#744210">fragments.</text>
+
+  <!-- top-right: platform team + multi-cloud -->
+  <rect x="660" y="120" width="480" height="200" rx="10" fill="#fff5f5" stroke="#c53030" stroke-width="2"/>
+  <text x="680" y="155" font-size="20" font-weight="700" fill="#9b2c2c">&#10005; Wrong layer on both counts</text>
+  <text x="680" y="184" font-size="17" fill="#742a2a">AWS-bound AND it collapses the</text>
+  <text x="680" y="208" font-size="17" fill="#742a2a">layer you own.</text>
+  <text x="680" y="246" font-size="16" font-weight="700" fill="#742a2a">&#8592; a multi-cloud landing zone (aegis) sits here</text>
+
+  <!-- bottom-left: no platform team + single-cloud (SWEET SPOT) -->
+  <rect x="170" y="330" width="480" height="200" rx="10" fill="#f0fff4" stroke="#2f855a" stroke-width="3"/>
+  <text x="190" y="367" font-size="22" font-weight="700" fill="#22543d">&#10003; Blocks' sweet spot</text>
+  <text x="190" y="397" font-size="17" fill="#276749">Platform-team-quality defaults,</text>
+  <text x="190" y="421" font-size="17" fill="#276749">for free, with no one to own them.</text>
+  <text x="190" y="459" font-size="16" font-weight="700" fill="#276749">solo dev &#183; startup &#183; internal tool &#183; prototype</text>
+
+  <!-- bottom-right: no platform team + multi-cloud -->
+  <rect x="660" y="330" width="480" height="200" rx="10" fill="#fffaf0" stroke="#dd6b20" stroke-width="2"/>
+  <text x="680" y="367" font-size="20" font-weight="700" fill="#9c4221">&#9888; AWS-bound by construction</text>
+  <text x="680" y="396" font-size="17" fill="#744210">Every Block is an AWS service.</text>
+  <text x="680" y="420" font-size="17" fill="#744210">No portability seam to adopt</text>
+  <text x="680" y="444" font-size="17" fill="#744210">"one Block at a time."</text>
+
+  <!-- Axis labels -->
+  <!-- X axis -->
+  <text x="410" y="575" font-size="19" font-weight="700" fill="#2d3748" text-anchor="middle">Single-cloud (AWS)</text>
+  <text x="900" y="575" font-size="19" font-weight="700" fill="#2d3748" text-anchor="middle">Multi-cloud / portable</text>
+  <text x="655" y="608" font-size="15" fill="#718096" text-anchor="middle">cloud strategy &#8594;</text>
+
+  <!-- Y axis -->
+  <text x="150" y="225" font-size="19" font-weight="700" fill="#2d3748" text-anchor="middle" transform="rotate(-90 150 225)">Dedicated platform team</text>
+  <text x="150" y="430" font-size="19" font-weight="700" fill="#2d3748" text-anchor="middle" transform="rotate(-90 150 430)">No platform team</text>
+  <text x="40" y="325" font-size="15" fill="#718096" text-anchor="middle" transform="rotate(-90 40 325)">&#8592; org shape</text>
+</svg>
