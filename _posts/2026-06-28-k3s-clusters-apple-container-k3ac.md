@@ -1,7 +1,7 @@
 ---
 title: "k3s clusters on Apple Silicon micro-VMs: the datastore constraint that shapes real HA"
 subtitle: "Every local-dev Kubernetes tutorial puts all nodes on a shared kernel. Apple's container runtime breaks that assumption — one micro-VM per node, real DHCP IPs, no Docker daemon. The interesting part came when I tried to make the control plane highly available."
-date: 2026-06-28 20:00:00
+date: 2026-06-28 12:00:00
 tags: [k3s, kubernetes, apple-silicon, virtualization, golang, etcd, haproxy]
 asset_path: /assets/img/posts/2026-06-28-k3s-clusters-apple-container-k3ac
 thumbnail-img: /assets/img/posts/2026-06-28-k3s-clusters-apple-container-k3ac/social-card.png
