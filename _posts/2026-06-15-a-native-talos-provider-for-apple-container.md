@@ -31,7 +31,7 @@ door. It wasn't. Finding out why ran me into the one detail that decides the who
 design: **how apple/container assigns IP addresses**. This is the write-up of that
 spike — what worked, why a native provider was the only clean path, what the Talos
 maintainer said when I pitched it upstream, and the lesson I walked into. The code is a
-[public repo](https://github.com/BinHsu/aegis-talos-apple-container-provisioner); this
+[public repo](https://github.com/BinHsu/aegis-apple-container-provisioner-talos); this
 is the story.
 
 ![Three ways to run Talos locally]({{ page.asset_path }}/three-substrates.png)
