@@ -1,11 +1,12 @@
 ---
 title: "After Jenkins, GitHub Actions feels fragmented"
-subtitle: "The thing you miss isn't Jenkins — it's a single control plane"
+description: "The thing you miss isn't Jenkins — it's a single control plane"
 date: 2026-05-29 08:00:00
 tags: [cicd, jenkins, github-actions, platform-engineering, port]
 asset_path: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented
-thumbnail-img: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented/diagram.png
-share-img: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented/diagram.png
+image:
+  path: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented/diagram.png
+  alt: "Jenkins is one surface; GitHub Actions scatters it; a control plane re-unifies it"
 ---
 
 > Companion piece: [AWS CLI or AWS MCP?](/aws-cli-vs-mcp/) — same line of thinking: keep the control plane separate from the thing that executes.
@@ -13,8 +14,6 @@ share-img: /assets/img/posts/2026-05-29-after-jenkins-gha-feels-fragmented/diagr
 I grew up on Jenkins. A year into GitHub Actions, the word I keep reaching for is **fragmented**.
 
 Not worse. Fragmented. On Jenkins my pipelines, my shared logic, my self-service jobs, and my run history all lived in one place I could reason about. On GHA the same capability is real — but it's scattered across YAML files, repos, marketplace actions, reusable workflows, and ephemeral runners. The feeling has a cause, and it has a fix that isn't "go back."
-
-![Jenkins is one surface; GitHub Actions scatters it; a control plane re-unifies it]({{ page.asset_path }}/diagram.png)
 
 ## What you're actually missing
 

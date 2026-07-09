@@ -1,16 +1,15 @@
 ---
 title: "A version number tripled my cloud bill — and only a machine caught it"
-subtitle: "I had seven guardrails against exactly this. Six were written rules. One was enforced by a machine — and it was the only one that fired."
+description: "I had seven guardrails against exactly this. Six were written rules. One was enforced by a machine — and it was the only one that fired."
 date: 2026-06-06 09:00:00
 tags: [aws, eks, finops, gitops, postmortem]
 asset_path: /assets/img/posts/2026-06-06-a-version-number-tripled-my-cloud-bill
-thumbnail-img: /assets/img/posts/2026-06-06-a-version-number-tripled-my-cloud-bill/seven-guardrails-one-fired.png
-share-img: /assets/img/posts/2026-06-06-a-version-number-tripled-my-cloud-bill/seven-guardrails-one-fired.png
+image:
+  path: /assets/img/posts/2026-06-06-a-version-number-tripled-my-cloud-bill/seven-guardrails-one-fired.png
+  alt: "Seven guardrails against this exact failure. Six were written rules and all of them missed it. The only one that fired was the single machine-enforced guardrail — an AWS Budgets alarm."
 ---
 
 I know my FinOps. An empty Kubernetes cluster on AWS — control plane, **zero nodes** — runs under 20¢ an hour. So when a budget email told me I'd burned **over $8 in a single day**, I knew something was wrong.
-
-![Seven guardrails against this exact failure. Six were written rules and all of them missed it. The only one that fired was the single machine-enforced guardrail — an AWS Budgets alarm.](/assets/img/posts/2026-06-06-a-version-number-tripled-my-cloud-bill/seven-guardrails-one-fired.png)
 
 The cause was almost funny. I'd spun up a cluster to test something, the setup half-failed and left it running, and three days later the teardown jammed too. So it sat there billing 24/7 — at **6× even the rate I expected**, because the version I'd pinned had quietly aged out of support. A date had become a price.
 

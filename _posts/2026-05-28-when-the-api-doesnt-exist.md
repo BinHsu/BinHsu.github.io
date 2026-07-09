@@ -1,6 +1,6 @@
 ---
 title: "When the API doesn't exist"
-subtitle: "A browser agent for the job search loop"
+description: "A browser agent for the job search loop"
 date: 2026-05-28
 tags: [agents, automation, playwright]
 asset_path: /assets/img/posts/2026-05-28-linkedin-fieldtest

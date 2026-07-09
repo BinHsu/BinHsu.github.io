@@ -1,6 +1,8 @@
 ---
+# the default layout is 'page'
 title: About
-permalink: /about/
+icon: fas fa-info-circle
+order: 4
 ---
 
 Senior Software Architect — hands-on, system-comprehension first.

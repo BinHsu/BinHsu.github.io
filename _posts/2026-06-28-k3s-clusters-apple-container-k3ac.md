@@ -1,11 +1,11 @@
 ---
 title: "Running k3s on Apple's container runtime — HA clusters, one micro-VM per node"
-subtitle: "Every local-dev Kubernetes tutorial puts all nodes on a shared kernel. Apple's container runtime breaks that assumption — one micro-VM per node, real DHCP IPs, no Docker daemon. The interesting part came when I tried to make the control plane highly available."
+description: "Every local-dev Kubernetes tutorial puts all nodes on a shared kernel. Apple's container runtime breaks that assumption — one micro-VM per node, real DHCP IPs, no Docker daemon. The interesting part came when I tried to make the control plane highly available."
 date: 2026-06-28 12:00:00
 tags: [k3s, kubernetes, apple-silicon, virtualization, golang, etcd, haproxy]
 asset_path: /assets/img/posts/2026-06-28-k3s-clusters-apple-container-k3ac
-thumbnail-img: /assets/img/posts/2026-06-28-k3s-clusters-apple-container-k3ac/social-card.png
-share-img: /assets/img/posts/2026-06-28-k3s-clusters-apple-container-k3ac/social-card.png
+image:
+  path: /assets/img/posts/2026-06-28-k3s-clusters-apple-container-k3ac/social-card.png
 ---
 
 Local Kubernetes on a Mac has a quiet assumption underneath it: all nodes share one kernel.

@@ -1,0 +1,18 @@
+# The contact options (sidebar bottom).
+# Ported from the Beautiful Jekyll footer social links + navbar Portfolio link.
+
+- type: github
+  icon: "fab fa-github"
+
+- type: linkedin
+  icon: "fab fa-linkedin" # icons powered by <https://fontawesome.com/>
+  url: "https://www.linkedin.com/in/bin-hsu-taiwan"
+
+# Old top-navbar "Portfolio" link — the recruiter-facing site.
+- type: portfolio
+  icon: "fas fa-globe"
+  url: "https://binhsu.org"
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true

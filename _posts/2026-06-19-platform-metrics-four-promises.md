@@ -1,11 +1,12 @@
 ---
 title: "Platform metrics are four promises, not a list to memorize"
-subtitle: "Every platform-engineering interview eventually asks how you measure the platform. The weak answer recites DORA. The strong one knows the metrics group into four promises a platform makes — and that most teams only keep two of them. The full reference table, and the one family almost everyone forgets."
+description: "Every platform-engineering interview eventually asks how you measure the platform. The weak answer recites DORA. The strong one knows the metrics group into four promises a platform makes — and that most teams only keep two of them. The full reference table, and the one family almost everyone forgets."
 date: 2026-06-19 09:00:00
 tags: [platform-engineering, sre, dora, observability, devex, finops]
 asset_path: /assets/img/posts/2026-06-19-platform-metrics-four-promises
-thumbnail-img: /assets/img/posts/2026-06-19-platform-metrics-four-promises/four-promises.png
-share-img: /assets/img/posts/2026-06-19-platform-metrics-four-promises/four-promises.png
+image:
+  path: /assets/img/posts/2026-06-19-platform-metrics-four-promises/four-promises.png
+  alt: "The whole reference in one card. Four families, four promises — and one family, in orange, that most teams never actually measure."
 ---
 
 Every platform-engineering interview eventually reaches the same question: *how do you
@@ -16,10 +17,6 @@ That answer is fine. It's also forgettable, because it treats the metrics as a f
 acronyms. The metrics aren't a list. They're **four promises a platform makes** to the
 company that pays for it — and the senior move is to name the promise first, then reach for
 the metric that proves it.
-
-![The four metric families as four promises a platform makes]({{ page.asset_path }}/four-promises.png)
-*The whole reference in one card. Four families, four promises — and one family, in orange,
-that most teams never actually measure.*
 
 ## Promise 1 — Delivery: we ship fast without breaking prod
 

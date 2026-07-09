@@ -1,11 +1,12 @@
 ---
 title: "A native Talos provider for Apple's container runtime"
-subtitle: "Production dropped the Docker daemon years ago; the local dev loop never did. I tried to close that gap with Talos on Apple's container runtime — and DHCP, then a maintainer's 'no,' turned out to be the real story."
+description: "Production dropped the Docker daemon years ago; the local dev loop never did. I tried to close that gap with Talos on Apple's container runtime — and DHCP, then a maintainer's 'no,' turned out to be the real story."
 date: 2026-06-15 21:00:00
 tags: [talos, kubernetes, apple-silicon, virtualization, golang]
 asset_path: /assets/img/posts/2026-06-15-a-native-talos-provider-for-apple-container
-thumbnail-img: /assets/img/posts/2026-06-15-a-native-talos-provider-for-apple-container/three-substrates.png
-share-img: /assets/img/posts/2026-06-15-a-native-talos-provider-for-apple-container/three-substrates.png
+image:
+  path: /assets/img/posts/2026-06-15-a-native-talos-provider-for-apple-container/three-substrates.png
+  alt: "The two supported local substrates sit on either side of Apple's runtime. The middle column had no provider — and the reason it needed its own turns out to be the IP column."
 ---
 
 Apple shipped [`container`](https://github.com/apple/container) — an open-source tool
@@ -33,10 +34,6 @@ spike — what worked, why a native provider was the only clean path, what the T
 maintainer said when I pitched it upstream, and the lesson I walked into. The code is a
 [public repo](https://github.com/BinHsu/aegis-apple-container-provisioner-talos); this
 is the story.
-
-![Three ways to run Talos locally]({{ page.asset_path }}/three-substrates.png)
-*The two supported local substrates sit on either side of Apple's runtime. The middle
-column had no provider — and the reason it needed its own turns out to be the IP column.*
 
 ## What Apple's container runtime actually is
 

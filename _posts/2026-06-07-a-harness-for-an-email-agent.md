@@ -1,18 +1,17 @@
 ---
 title: "What \"don't trust the agent\" means — a harness for an email agent"
-subtitle: "Wisely Chen condenses agent safety into \"Harness = Agent − Model.\" Right, but abstract. Here's the same idea on one concrete system, in four moves — built around one threat: a malicious email that hijacks the agent."
+description: "Wisely Chen condenses agent safety into \"Harness = Agent − Model.\" Right, but abstract. Here's the same idea on one concrete system, in four moves — built around one threat: a malicious email that hijacks the agent."
 date: 2026-06-07 06:00:00
 tags: [ai, agents, security, harness, prompt-injection]
 asset_path: /assets/img/posts/2026-06-07-a-harness-for-an-email-agent
-thumbnail-img: /assets/img/posts/2026-06-07-a-harness-for-an-email-agent/four-moves-email-harness.png
-share-img: /assets/img/posts/2026-06-07-a-harness-for-an-email-agent/four-moves-email-harness.png
+image:
+  path: /assets/img/posts/2026-06-07-a-harness-for-an-email-agent/four-moves-email-harness.png
+  alt: "Harnessing an email agent — four moves to make a hijacked agent harmless: tier by blast radius (read is the injection entry point), narrow tools plus a human gate (caps what it can reach), scope the sender in IAM (caps the damage), log every call with attribution (makes it traceable)."
 ---
 
 Wisely Chen has a sharp framing for agent safety he calls **harness engineering**: *Harness = Agent − Model* — strip the model out of an agent and what's left, the external engineering around it, is the harness. His thesis, across four hook demos, is one line: **prompt is advice; the mechanism is the rule.** Don't trust your prompts — trust your whole process and mechanism. ([his video transcript](https://ai-coding.wiselychen.com/agent-harness-four-demos-video-transcript/))
 
 I think that's right. I also think it's abstract enough that it's easy to nod at and hard to apply. So I took one concrete system — an email agent — and condensed it into four moves you can put into a design today.
-
-![Harnessing an email agent — four moves to make a hijacked agent harmless: tier by blast radius (read is the injection entry point), narrow tools plus a human gate (caps what it can reach), scope the sender in IAM (caps the damage), log every call with attribution (makes it traceable).](/assets/img/posts/2026-06-07-a-harness-for-an-email-agent/four-moves-email-harness.png)
 
 ## Start with the threat
 

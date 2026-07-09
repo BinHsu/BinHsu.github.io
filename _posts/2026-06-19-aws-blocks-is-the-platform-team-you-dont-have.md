@@ -1,11 +1,12 @@
 ---
 title: "AWS Blocks is the platform team you don't have"
-subtitle: "AWS shipped an infrastructure-from-code toolkit that derives your AWS resources straight from TypeScript. It's a real gift to a single-app team on AWS — and the wrong layer the moment you have a platform team or a multi-cloud stance. Here's the boundary, mapped against a platform I actually run."
+description: "AWS shipped an infrastructure-from-code toolkit that derives your AWS resources straight from TypeScript. It's a real gift to a single-app team on AWS — and the wrong layer the moment you have a platform team or a multi-cloud stance. Here's the boundary, mapped against a platform I actually run."
 date: 2026-06-19 04:00:00
 tags: [aws, infrastructure-from-code, platform-engineering, cdk, architecture]
 asset_path: /assets/img/posts/2026-06-19-aws-blocks-is-the-platform-team-you-dont-have
-thumbnail-img: /assets/img/posts/2026-06-19-aws-blocks-is-the-platform-team-you-dont-have/two-contexts.png
-share-img: /assets/img/posts/2026-06-19-aws-blocks-is-the-platform-team-you-dont-have/two-contexts.png
+image:
+  path: /assets/img/posts/2026-06-19-aws-blocks-is-the-platform-team-you-dont-have/two-contexts.png
+  alt: "The sort in one picture. Blocks' sweet spot is the bottom-left — single-cloud, no platform team. Every other quadrant is where one of the two boundaries bites; a multi-cloud landing zone with a platform team sits in the opposite corner."
 ---
 
 > Companion piece: [Knative, ECS, and the cognitive load that won't disappear](/knative-ecs-cognitive-load/) — the same question from the serverless-containers angle: who carries the operator burden the abstraction hides.
@@ -22,11 +23,6 @@ Does this replace my platform team?* That frames Blocks on a technical axis — 
 IaC, new versus old. Wrong axis. The thing that decides whether Blocks is a gift or a
 liability isn't how advanced it is. It's the shape of the team holding it. The right
 question is: **do you have a platform team, and is your future single-cloud?**
-
-![Where AWS Blocks fits: a 2x2 of org shape against cloud strategy]({{ page.asset_path }}/two-contexts.png)
-*The sort in one picture. Blocks' sweet spot is the bottom-left — single-cloud, no
-platform team. Every other quadrant is where one of the two boundaries bites; a
-multi-cloud landing zone with a platform team sits in the opposite corner.*
 
 ## What it actually is
 

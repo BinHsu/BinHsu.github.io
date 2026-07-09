@@ -1,11 +1,12 @@
 ---
 title: "Knative, ECS, and the cognitive load that won't disappear"
-subtitle: "ECS and Cloud Run feel effortless because someone else runs the substrate. Knative can match that developer experience — but self-host it and the load doesn't vanish, it moves to your platform team. A look at where the simplicity actually comes from."
+description: "ECS and Cloud Run feel effortless because someone else runs the substrate. Knative can match that developer experience — but self-host it and the load doesn't vanish, it moves to your platform team. A look at where the simplicity actually comes from."
 date: 2026-06-19 05:00:00
 tags: [knative, ecs, kubernetes, platform-engineering, serverless]
 asset_path: /assets/img/posts/2026-06-19-knative-ecs-cognitive-load
-thumbnail-img: /assets/img/posts/2026-06-19-knative-ecs-cognitive-load/load-is-conserved.png
-share-img: /assets/img/posts/2026-06-19-knative-ecs-cognitive-load/load-is-conserved.png
+image:
+  path: /assets/img/posts/2026-06-19-knative-ecs-cognitive-load/load-is-conserved.png
+  alt: "The whole argument in one picture. The green \"Dev\" block is small in all three — that's the gift. The big operator block is the same size everywhere; only the owner changes."
 ---
 
 > Companion piece: [AWS Blocks is the platform team you don't have](/aws-blocks-is-the-platform-team-you-dont-have/) — the same question, from the infrastructure-from-code angle: who owns the layer the abstraction hides.
@@ -19,10 +20,6 @@ Knative is the open-source thing people reach for to get that feeling back. And 
 mostly. But "low cognitive load" turns out to be two different things bundled together, and
 self-hosted Knative only hands you one of them for free. The other one doesn't disappear.
 It moves.
-
-![Cognitive load is conserved: the developer's half shrinks the same way in all three; only who carries the operator's half changes]({{ page.asset_path }}/load-is-conserved.png)
-*The whole argument in one picture. The green "Dev" block is small in all three — that's
-the gift. The big operator block is the same size everywhere; only the owner changes.*
 
 ## "Low cognitive load" is two things, not one
 

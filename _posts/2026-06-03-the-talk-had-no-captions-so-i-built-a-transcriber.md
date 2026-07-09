@@ -1,18 +1,17 @@
 ---
 title: "The YouTube talk had no captions, so I built a transcriber"
-subtitle: "A local YouTube-to-text tool — captions when they exist, Whisper when they don't. Built to read one talk about working with AI agents."
+description: "A local YouTube-to-text tool — captions when they exist, Whisper when they don't. Built to read one talk about working with AI agents."
 date: 2026-06-03 09:00:00
 tags: [claude-code, agents, whisper, yt-dlp, python]
 asset_path: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber
-thumbnail-img: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber/captions-to-transcript.png
-share-img: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber/captions-to-transcript.png
+image:
+  path: /assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber/captions-to-transcript.png
+  alt: "Left: a video frame with its CC badge crossed out — captions disabled. Right: a clean transcript page. In between, an audio waveform: when the captions are gone, transcribe the sound locally."
 ---
 
 I wanted to read *[Beyond the basics with Claude Code](https://www.youtube.com/watch?v=tuY2ChJIx48)*, not watch it twice. It was Daisy Hollman's YouTube talk about working with AI agents at scale — a good one. I'd watched it once; I wanted the text so I could pull quotes and think against it. I clicked **Show transcript**. Nothing. Captions were off.
 
 So I did the obvious thing and built a small tool to turn the URL into text — **[aegis-yt-transcriber](https://github.com/BinHsu/aegis-yt-transcriber)**, MIT and on GitHub. There's a loop here I enjoy: I used an agent to build a tool to read a talk about using agents. The tool is small. The story is in two design calls.
-
-![Left: a video frame with its CC badge crossed out — captions disabled. Right: a clean transcript page. In between, an audio waveform: when the captions are gone, transcribe the sound locally.](/assets/img/posts/2026-06-03-the-talk-had-no-captions-so-i-built-a-transcriber/captions-to-transcript.png)
 
 ## First call: where does the text come from?
 
