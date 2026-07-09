@@ -1,16 +1,15 @@
 ---
 title: "Questions that can't be answered by accident"
-subtitle: "Years prove work happened near someone. Six probes for the engine that did the thinking — and where each one comes from."
+description: "Years prove work happened near someone. Six probes for the engine that did the thinking — and where each one comes from."
 date: 2026-06-11 11:00:00
 tags: [hiring, interviews, engineering-culture]
 asset_path: /assets/img/posts/2026-06-11-questions-that-cant-be-answered-by-accident
-thumbnail-img: /assets/img/posts/2026-06-11-questions-that-cant-be-answered-by-accident/artifact-vs-generator.png
-share-img: /assets/img/posts/2026-06-11-questions-that-cant-be-answered-by-accident/artifact-vs-generator.png
+image:
+  path: /assets/img/posts/2026-06-11-questions-that-cant-be-answered-by-accident/artifact-vs-generator.png
+  alt: "A CV proves artifacts — years, titles, tool lists. The engineer you want owns the generator that produced them. Interview the generator."
 ---
 
 A shower thought, after a season of sitting on the candidate side of a lot of interviews: what should an interviewer ask to find the engineer who is excellent at *whatever* they touch — and to filter out the one who merely stood near the work, or whose "senior" is tenure arithmetic?
-
-![A CV proves artifacts — years, titles, tool lists. The engineer you want owns the generator that produced them. Interview the generator.]({{ page.asset_path }}/artifact-vs-generator.png)
 
 Here is the frame I keep landing on. An engineer who "happened to do it" owns an **artifact**: the project existed, they were on it, the bullet point is true. The engineer you actually want owns the **generator** — the internal model that produced the artifact, and would produce a different, equally sound artifact under different constraints. A CV can only prove artifacts. Years and titles are artifact-proofs too. So the interview has one job the CV can't do: **probe the generator**.
 

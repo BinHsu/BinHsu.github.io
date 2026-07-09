@@ -7,6 +7,13 @@ _site/
 # Local dev (we don't carry Gemfile.lock to avoid platform drift)
 Gemfile.lock
 
+# Bundler — gems install repo-local (BUNDLE_PATH=vendor/bundle), never committed
+.bundle/
+vendor/
+
+# RubyGems
+*.gem
+
 # OS / editor noise
 .DS_Store
 *.swp

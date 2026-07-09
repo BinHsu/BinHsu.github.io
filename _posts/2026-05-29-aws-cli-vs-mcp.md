@@ -1,11 +1,12 @@
 ---
 title: "AWS CLI or AWS MCP?"
-subtitle: "What AWS shipped, a hands-on install you can reproduce, and where the new trust boundary sits"
+description: "What AWS shipped, a hands-on install you can reproduce, and where the new trust boundary sits"
 date: 2026-05-29 07:00:00
 tags: [aws, mcp, agents, devsecops]
 asset_path: /assets/img/posts/2026-05-29-aws-cli-vs-mcp
-thumbnail-img: /assets/img/posts/2026-05-29-aws-cli-vs-mcp/diagram.png
-share-img: /assets/img/posts/2026-05-29-aws-cli-vs-mcp/diagram.png
+image:
+  path: /assets/img/posts/2026-05-29-aws-cli-vs-mcp/diagram.png
+  alt: "AWS CLI vs AWS MCP — the two paths an agent takes to AWS"
 ---
 
 > Companion piece: [Webwright setup and how agents meet the real world](/webwright-setup-and-how-agents-meet-the-real-world/) — same theme, different surface: what changes when an agent stops reading and starts acting.
@@ -15,8 +16,6 @@ Someone asked me a sharp question this week: *would you rather use the AWS CLI o
 The question has a hidden assumption. CLI and MCP are not two tools competing for the same job. They sit at different layers. One **executes**. One **grounds**. Picking "which" is the wrong frame; knowing *when each earns its place* is the right one.
 
 So I installed one end to end, kept every command, and wrote it up so you can reproduce it in about five minutes.
-
-![AWS CLI vs AWS MCP — the two paths an agent takes to AWS]({{ page.asset_path }}/diagram.png)
 
 ## What AWS actually shipped, and when
 

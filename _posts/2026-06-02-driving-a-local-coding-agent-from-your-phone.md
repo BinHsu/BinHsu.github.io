@@ -1,18 +1,17 @@
 ---
 title: "Driving a local coding agent from your phone"
-subtitle: "Claude Code Remote Control, read through DevSecOps, FinOps, and GitOps — with the settings that make it safe"
+description: "Claude Code Remote Control, read through DevSecOps, FinOps, and GitOps — with the settings that make it safe"
 date: 2026-06-02 06:00:00
 tags: [claude-code, agents, devsecops, gitops, finops]
 asset_path: /assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone
-thumbnail-img: /assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone/tethered-vs-free.png
-share-img: /assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone/tethered-vs-free.png
+image:
+  path: /assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone/tethered-vs-free.png
+  alt: "Same session, two places: on the left a frustrated engineer chained to the terminal, unable to step away; on the right the same session driven from a phone while it keeps running on the laptop."
 ---
 
 I sent a message to my laptop's coding-agent session from my phone — by voice — and it executed on my machine. The novelty lasted about five seconds. Then the operator brain took over: *whoever holds this channel holds my machine.*
 
 This is Claude Code's **Remote Control** (research preview at the time of writing). It's a genuine portability win. It's also a new control plane, and a control plane deserves the same three reads I'd give any production system: how it fails under attack, what it costs, and whether its configuration is reproducible. DevSecOps, FinOps, GitOps. Here's the feature, then each lens with settings you can paste.
-
-![Same session, two places: on the left a frustrated engineer chained to the terminal, unable to step away; on the right the same session driven from a phone while it keeps running on the laptop.](/assets/img/posts/2026-06-02-driving-a-local-coding-agent-from-your-phone/tethered-vs-free.png)
 
 ## What it actually is
 
