@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>Five AI red flags that mean run away</title>
+  <desc>Hero image: five stylized red pennant flags in a row beside the title 'Five AI red flags that mean run away', subtitled 'interviewing at self-declared AI-first companies'.</desc>
+
+  <rect x="0" y="0" width="1200" height="630" fill="#1B222C"/>
+
+  <!-- Five-flag motif, left side: poles + pennants -->
+  <g stroke="#7C8798" stroke-width="5" stroke-linecap="round">
+    <line x1="110" y1="200" x2="110" y2="470"/>
+    <line x1="170" y1="230" x2="170" y2="470"/>
+    <line x1="230" y1="260" x2="230" y2="470"/>
+    <line x1="290" y1="290" x2="290" y2="470"/>
+    <line x1="350" y1="320" x2="350" y2="470"/>
+  </g>
+  <g fill="#C1633A">
+    <polygon points="110,200 178,222 110,244"/>
+    <polygon points="170,230 238,252 170,274"/>
+    <polygon points="230,260 298,282 230,304"/>
+    <polygon points="290,290 358,312 290,334"/>
+    <polygon points="350,320 418,342 350,364"/>
+  </g>
+  <!-- Ground line -->
+  <line x1="80" y1="472" x2="430" y2="472" stroke="#3A4256" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Eyebrow -->
+  <text x="490" y="180" font-size="16" font-weight="700" letter-spacing="3" fill="#2E9E8C">INTERVIEWING &#183; AI-FIRST COMPANIES</text>
+
+  <!-- Title -->
+  <text x="490" y="264" font-size="64" font-weight="800" fill="#F2F4F7">Five AI red flags</text>
+  <text x="490" y="348" font-size="64" font-weight="800" fill="#C1633A">that mean run away</text>
+
+  <!-- Subtitle -->
+  <text x="490" y="408" font-size="24" fill="#A9B2C0">the sentence you&#8217;ll hear, what it reveals,</text>
+  <text x="490" y="442" font-size="24" fill="#A9B2C0">and one probe question for each</text>
+
+  <!-- Attribution -->
+  <text x="1150" y="595" text-anchor="end" font-size="18" fill="#7C8798">Bin Hsu</text>
+</svg>

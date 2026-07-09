@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1105" viewBox="0 0 1000 1105" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>Five AI red flags that mean run away</title>
+  <desc>Five cards, one per red flag. 1: Capability ceiling — 'LLMs are just another Google' reveals the ceiling is leadership's imagination. 2: Process punishes the skill — 'AI wrote your take-home? How is that fair?' reveals hiring punishes what it claims to hire. 3: AI theater — 'We've adopted AI, everyone has Copilot' reveals licenses bought, nothing redesigned. 4: Governance at the poles — 'Security banned LLMs' or 'no rules, use whatever' reveals nobody threat-modeled anything. 5: Velocity without verification — 'Almost all our code is AI-written, 10x faster' reveals no story for catching what's wrong.</desc>
+
+  <rect x="0" y="0" width="1000" height="1105" fill="#F7F8FA"/>
+
+  <!-- Title + tagline -->
+  <text x="500" y="58" text-anchor="middle" font-size="31" font-weight="700" fill="#25324B">Five AI red flags that mean run away</text>
+  <text x="500" y="94" text-anchor="middle" font-size="17" font-style="italic" fill="#5B6472">the sentence you&#8217;ll hear &#8212; and what it actually reveals</text>
+
+  <!-- Card 1 -->
+  <rect x="40" y="126" width="920" height="172" rx="10" fill="#FFFFFF" stroke="#25324B" stroke-width="1.5"/>
+  <circle cx="103" cy="212" r="30" fill="#C1633A"/>
+  <text x="103" y="224" text-anchor="middle" font-size="32" font-weight="800" fill="#FFFFFF">1</text>
+  <text x="163" y="176" font-size="24" font-weight="700" fill="#25324B">Capability ceiling</text>
+  <text x="163" y="222" font-size="21" font-style="italic" fill="#3A4256">&#8220;LLMs are just another kind of Google.&#8221;</text>
+  <text x="163" y="266" font-size="19" font-weight="700" fill="#8C4126">&#8594; the ceiling is leadership&#8217;s imagination</text>
+
+  <!-- Card 2 -->
+  <rect x="40" y="312" width="920" height="172" rx="10" fill="#FFFFFF" stroke="#25324B" stroke-width="1.5"/>
+  <circle cx="103" cy="398" r="30" fill="#C1633A"/>
+  <text x="103" y="410" text-anchor="middle" font-size="32" font-weight="800" fill="#FFFFFF">2</text>
+  <text x="163" y="362" font-size="24" font-weight="700" fill="#25324B">Process punishes the skill</text>
+  <text x="163" y="408" font-size="21" font-style="italic" fill="#3A4256">&#8220;AI wrote your take-home &#8212; how is that fair?&#8221;</text>
+  <text x="163" y="452" font-size="19" font-weight="700" fill="#8C4126">&#8594; hiring punishes what it claims to hire</text>
+
+  <!-- Card 3 -->
+  <rect x="40" y="498" width="920" height="172" rx="10" fill="#FFFFFF" stroke="#25324B" stroke-width="1.5"/>
+  <circle cx="103" cy="584" r="30" fill="#C1633A"/>
+  <text x="103" y="596" text-anchor="middle" font-size="32" font-weight="800" fill="#FFFFFF">3</text>
+  <text x="163" y="548" font-size="24" font-weight="700" fill="#25324B">AI theater</text>
+  <text x="163" y="594" font-size="21" font-style="italic" fill="#3A4256">&#8220;We&#8217;ve adopted AI &#8212; everyone has Copilot.&#8221;</text>
+  <text x="163" y="638" font-size="19" font-weight="700" fill="#8C4126">&#8594; licenses bought, nothing redesigned</text>
+
+  <!-- Card 4 -->
+  <rect x="40" y="684" width="920" height="172" rx="10" fill="#FFFFFF" stroke="#25324B" stroke-width="1.5"/>
+  <circle cx="103" cy="770" r="30" fill="#C1633A"/>
+  <text x="103" y="782" text-anchor="middle" font-size="32" font-weight="800" fill="#FFFFFF">4</text>
+  <text x="163" y="734" font-size="24" font-weight="700" fill="#25324B">Governance at the poles</text>
+  <text x="163" y="780" font-size="21" font-style="italic" fill="#3A4256">&#8220;Security banned LLMs.&#8221; &#183; &#8220;No rules, use whatever.&#8221;</text>
+  <text x="163" y="824" font-size="19" font-weight="700" fill="#8C4126">&#8594; nobody threat-modeled anything</text>
+
+  <!-- Card 5 -->
+  <rect x="40" y="870" width="920" height="172" rx="10" fill="#FFFFFF" stroke="#25324B" stroke-width="1.5"/>
+  <circle cx="103" cy="956" r="30" fill="#C1633A"/>
+  <text x="103" y="968" text-anchor="middle" font-size="32" font-weight="800" fill="#FFFFFF">5</text>
+  <text x="163" y="920" font-size="24" font-weight="700" fill="#25324B">Velocity without verification</text>
+  <text x="163" y="966" font-size="21" font-style="italic" fill="#3A4256">&#8220;Almost all our code is AI-written &#8212; 10&#215; faster.&#8221;</text>
+  <text x="163" y="1010" font-size="19" font-weight="700" fill="#8C4126">&#8594; no story for catching what&#8217;s wrong</text>
+
+  <!-- Footnote -->
+  <text x="500" y="1078" text-anchor="middle" font-size="13" font-style="italic" fill="#8C97A8">Sentence archetypes, not quotes &#8212; you&#8217;ll hear some version of each.</text>
+</svg>
