@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>Your laptop is a valid SAML identity provider</title>
+  <desc>Hero image: a cloud (the service) and a laptop (the identity provider) with a crossed-out dashed line between them, both connected only through a browser window that relays the messages, beside the title 'Your laptop is a valid SAML IdP'.</desc>
+
+  <rect x="0" y="0" width="1200" height="630" fill="#1B222C"/>
+
+  <!-- No direct connection: dashed line cloud to laptop, crossed out -->
+  <line x1="150" y1="250" x2="150" y2="380" stroke="#3A4256" stroke-width="4" stroke-dasharray="10 10" stroke-linecap="round"/>
+  <g stroke="#C1633A" stroke-width="6" stroke-linecap="round">
+    <line x1="132" y1="297" x2="168" y2="333"/>
+    <line x1="168" y1="297" x2="132" y2="333"/>
+  </g>
+
+  <!-- Relayed path: cloud to browser to laptop -->
+  <g stroke="#2E9E8C" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M 225 205 Q 300 215 318 262"/>
+    <path d="M 318 368 Q 300 415 225 430"/>
+  </g>
+  <g fill="#2E9E8C">
+    <polygon points="318,262 306,250 330,248"/>
+    <polygon points="225,430 239,419 241,442"/>
+  </g>
+
+  <!-- Cloud: the service provider -->
+  <g fill="#7C8798">
+    <circle cx="118" cy="200" r="34"/>
+    <circle cx="160" cy="178" r="44"/>
+    <circle cx="200" cy="204" r="30"/>
+    <rect x="84" y="200" width="146" height="34" rx="17"/>
+  </g>
+
+  <!-- Browser window: carries every hop -->
+  <rect x="268" y="262" width="150" height="106" rx="10" fill="#232B37" stroke="#A9B2C0" stroke-width="4"/>
+  <line x1="268" y1="290" x2="418" y2="290" stroke="#A9B2C0" stroke-width="4"/>
+  <g fill="#A9B2C0">
+    <circle cx="286" cy="276" r="5"/>
+    <circle cx="302" cy="276" r="5"/>
+    <circle cx="318" cy="276" r="5"/>
+  </g>
+  <g stroke="#3A4256" stroke-width="6" stroke-linecap="round">
+    <line x1="288" y1="316" x2="398" y2="316"/>
+    <line x1="288" y1="336" x2="370" y2="336"/>
+  </g>
+
+  <!-- Laptop: the identity provider on localhost -->
+  <rect x="96" y="392" width="128" height="80" rx="8" fill="#232B37" stroke="#7C8798" stroke-width="5"/>
+  <path d="M 76 480 L 244 480 L 232 494 L 88 494 Z" fill="#7C8798"/>
+  <!-- Key on the laptop screen -->
+  <g stroke="#C1633A" stroke-width="5" stroke-linecap="round" fill="none">
+    <circle cx="140" cy="432" r="12"/>
+    <line x1="152" y1="432" x2="186" y2="432"/>
+    <line x1="176" y1="432" x2="176" y2="444"/>
+    <line x1="186" y1="432" x2="186" y2="442"/>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="490" y="180" font-size="16" font-weight="700" letter-spacing="3" fill="#2E9E8C">SSO &#183; LOCAL TESTING</text>
+
+  <!-- Title -->
+  <text x="490" y="264" font-size="64" font-weight="800" fill="#F2F4F7">Your laptop is a</text>
+  <text x="490" y="348" font-size="64" font-weight="800" fill="#C1633A">valid SAML IdP</text>
+
+  <!-- Subtitle -->
+  <text x="490" y="408" font-size="24" fill="#A9B2C0">the browser carries every hop, so localhost</text>
+  <text x="490" y="442" font-size="24" fill="#A9B2C0">works against a real online service</text>
+
+  <!-- Attribution -->
+  <text x="1150" y="595" text-anchor="end" font-size="18" fill="#7C8798">Bin Hsu</text>
+</svg>
