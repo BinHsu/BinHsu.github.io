@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 280" width="780" height="280" role="img" aria-label="cert-manager DNS-01 flow and the ACM gap"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="278" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<g font-size="12.5">
+<rect x="20" y="40" width="140" height="56" rx="10" class="s2f"/><text x="90" y="63" text-anchor="middle" class="t disp" font-size="13">Certificate</text><text x="90" y="82" text-anchor="middle" class="tm" font-size="11">"I want a cert for this domain"</text>
+<rect x="210" y="40" width="150" height="56" rx="10" class="s1f"/><text x="285" y="63" text-anchor="middle" class="t disp" font-size="13">cert-manager</text><text x="285" y="82" text-anchor="middle" class="tm" font-size="11">ClusterIssuer: Let's Encrypt</text>
+<rect x="410" y="40" width="150" height="56" rx="10" class="s3f"/><text x="485" y="63" text-anchor="middle" class="t disp" font-size="13">Route 53</text><text x="485" y="82" text-anchor="middle" class="tm" font-size="11">temporary TXT record</text>
+<rect x="610" y="40" width="150" height="56" rx="10" class="s3f"/><text x="685" y="63" text-anchor="middle" class="t disp" font-size="13">Let's Encrypt</text><text x="685" y="82" text-anchor="middle" class="tm" font-size="11">sees it, issues cert</text>
+<rect x="610" y="180" width="150" height="56" rx="10" class="s2f"/><text x="685" y="203" text-anchor="middle" class="t disp" font-size="13">K8s Secret</text><text x="685" y="222" text-anchor="middle" class="tm" font-size="11">tls.crt + tls.key (renews)</text>
+<rect x="410" y="180" width="150" height="56" rx="10" class="swf"/><text x="485" y="203" text-anchor="middle" class="t disp" font-size="13">manual ACM import</text><text x="485" y="222" text-anchor="middle" class="fw" font-size="11">does not renew</text>
+<rect x="210" y="180" width="150" height="56" rx="10" class="s3f"/><text x="285" y="203" text-anchor="middle" class="t disp" font-size="13">ALB :443</text><text x="285" y="222" text-anchor="middle" class="tm" font-size="11">certificate-arn annotation</text>
+<rect x="20" y="180" width="140" height="56" rx="10" class="pp2"/><text x="90" y="203" text-anchor="middle" class="t disp" font-size="13">users</text><text x="90" y="222" text-anchor="middle" class="tm" font-size="11">:80 redirects to :443</text>
+</g>
+<g stroke-width="2">
+<path d="M160 68 H206" class="lk" marker-end="url(#ah)"/><path d="M360 68 H406" class="lk" marker-end="url(#ah)"/>
+<path d="M560 68 H606" class="lk" marker-end="url(#ah)"/><path d="M685 96 V176" class="lk" marker-end="url(#ah)"/>
+<path d="M610 208 H564" class="lk" marker-end="url(#ah)"/><path d="M410 208 H364" class="lk" marker-end="url(#ah)"/>
+<path d="M210 208 H164" class="lk" marker-end="url(#ah)"/>
+</g>
+<text x="210" y="136" class="t2" font-size="12">IRSA: cert-manager's ServiceAccount borrows an IAM role scoped to Route 53</text>
+<text x="410" y="262" class="egg" font-size="11.5">the Secret renews. the ALB never hears about it.</text>
+</svg>

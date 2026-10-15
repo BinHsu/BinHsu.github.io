@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 288" width="780" height="288" role="img" aria-label="Taints, tolerations and node affinity as three pubs"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="286" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<rect x="30" y="80" width="200" height="140" rx="12" class="s2f"/><path d="M30 92 L130 40 L230 92" class="s2f"/>
+<text x="130" y="76" text-anchor="middle" class="t disp" font-size="14">worker</text>
+<rect x="280" y="80" width="200" height="140" rx="12" class="s2f"/><path d="M280 92 L380 40 L480 92" class="s2f"/>
+<text x="380" y="76" text-anchor="middle" class="t disp" font-size="14">worker2</text>
+<rect x="530" y="80" width="220" height="140" rx="12" class="s1f"/><path d="M530 92 L640 40 L750 92" class="s1f"/>
+<text x="640" y="76" text-anchor="middle" class="t disp" font-size="14">worker3</text>
+<rect x="550" y="102" width="180" height="30" rx="6" class="swf"/><text x="640" y="122" text-anchor="middle" class="fw mono" font-size="11.5">taint dedicated=payment</text>
+<rect x="570" y="140" width="140" height="26" rx="13" class="f1"/><text x="640" y="158" text-anchor="middle" fill="#fff" font-size="11.5" font-weight="700">label hype=true</text>
+<g class="f2"><circle cx="570" cy="192" r="14"/><circle cx="606" cy="192" r="14"/><circle cx="642" cy="192" r="14"/><circle cx="678" cy="192" r="14"/><circle cx="714" cy="192" r="14"/>
+<circle cx="80" cy="170" r="14"/><circle cx="116" cy="170" r="14"/><circle cx="330" cy="170" r="14"/></g>
+<text x="130" y="206" text-anchor="middle" class="t2" font-size="12">ordinary pods</text>
+<text x="380" y="206" text-anchor="middle" class="t2" font-size="12">ordinary pods</text>
+<text x="390" y="248" text-anchor="middle" class="t2" font-size="12.5">payment pods carry a toleration (the invite) and a required node affinity (they want to go)</text>
+<text x="390" y="270" text-anchor="middle" class="egg" font-size="11.5">an invite is not a direction</text>
+</svg>

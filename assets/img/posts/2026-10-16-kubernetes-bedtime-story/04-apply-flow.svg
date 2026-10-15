@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 310" width="780" height="310" role="img" aria-label="What happens after kubectl apply"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="308" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<g font-size="13">
+<rect x="24" y="30" width="118" height="44" rx="10" class="s3f"/><text x="83" y="57" text-anchor="middle" class="t disp">you, kubectl</text>
+<rect x="200" y="30" width="140" height="44" rx="10" class="s1f"/><text x="270" y="57" text-anchor="middle" class="t disp">API server</text>
+<rect x="400" y="30" width="110" height="44" rx="10" class="s1f"/><text x="455" y="57" text-anchor="middle" class="t disp">etcd</text>
+<rect x="400" y="240" width="170" height="44" rx="10" class="s1f"/><text x="485" y="267" text-anchor="middle" class="t disp">controller manager</text>
+<rect x="200" y="240" width="140" height="44" rx="10" class="s1f"/><text x="270" y="267" text-anchor="middle" class="t disp">scheduler</text>
+<rect x="600" y="130" width="150" height="54" rx="10" class="s2f"/><text x="675" y="153" text-anchor="middle" class="t disp">kubelet</text><text x="675" y="172" text-anchor="middle" class="tm" font-size="11">on the chosen node</text>
+</g>
+<g stroke-width="2">
+<path d="M142 52 H196" class="lk" marker-end="url(#ah)"/>
+<path d="M340 52 H396" class="lk" marker-end="url(#ah)"/>
+<path d="M300 74 C340 150 430 170 465 236" class="lk" marker-end="url(#ah)"/>
+<path d="M250 236 V78" class="lk" marker-end="url(#ah)"/>
+<path d="M310 74 C430 120 530 150 596 155" class="lk" marker-end="url(#ah)"/>
+</g>
+<g font-size="12" class="t2">
+<circle cx="168" cy="38" r="10" class="f1"/><text x="168" y="42" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text>
+<text x="150" y="94">send YAML</text>
+<circle cx="368" cy="38" r="10" class="f1"/><text x="368" y="42" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text>
+<text x="350" y="94">write it down</text>
+<circle cx="410" cy="188" r="10" class="f1"/><text x="410" y="192" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text>
+<text x="424" y="212">wanted != actual: create a pod object</text>
+<circle cx="236" cy="170" r="10" class="f1"/><text x="236" y="174" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">4</text>
+<text x="50" y="174">pick a node, write it back</text>
+<circle cx="570" cy="138" r="10" class="f1"/><text x="570" y="142" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">5</text>
+<text x="610" y="120">start pod, report status</text>
+</g>
+<text x="83" y="100" text-anchor="middle" class="egg" font-size="11">(check the context first)</text>
+</svg>

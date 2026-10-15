@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 446" width="780" height="446" role="img" aria-label="Kubernetes drawn as a company building"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="444" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<path d="M70 80 L390 24 L710 80 Z" class="s1f"/>
+<text x="390" y="68" text-anchor="middle" class="f1 disp" font-size="15">Kubernetes, Inc.</text>
+<rect x="70" y="80" width="640" height="150" class="s1f"/>
+<text x="86" y="104" class="f1 disp" font-size="13">Management floor: control plane</text>
+<g font-size="12">
+<g transform="translate(90 118)"><rect width="140" height="96" rx="10" class="pp"/><rect x="20" y="52" width="100" height="18" rx="4" class="s1f"/><circle cx="70" cy="34" r="12" class="f1"/>
+<text x="70" y="86" text-anchor="middle" class="t disp" font-size="12.5">front desk: API server</text><text x="70" y="18" text-anchor="middle" class="egg" font-size="10">401 or 403, politely</text></g>
+<g transform="translate(244 118)"><rect width="140" height="96" rx="10" class="pp"/><rect x="46" y="26" width="48" height="40" rx="3" class="f2"/><path d="M70 26 V66" stroke="#fff" stroke-width="1.5"/>
+<text x="70" y="86" text-anchor="middle" class="t disp" font-size="12.5">record book: etcd</text><text x="70" y="18" text-anchor="middle" class="tm" font-size="10">back it up</text></g>
+<g transform="translate(398 118)"><rect width="140" height="96" rx="10" class="pp"/><rect x="34" y="26" width="72" height="42" rx="4" class="s3f"/><path d="M40 58 L56 44 L70 52 L98 34" class="l3" stroke-width="2"/>
+<text x="70" y="86" text-anchor="middle" class="t disp" font-size="12.5">watcher: controller</text><text x="70" y="18" text-anchor="middle" class="tm" font-size="10">wants 20, keeps 20</text></g>
+<g transform="translate(552 118)"><rect width="140" height="96" rx="10" class="pp"/><rect x="40" y="28" width="26" height="34" rx="3" class="s2f"/><rect x="74" y="28" width="26" height="34" rx="3" class="f2"/>
+<text x="70" y="86" text-anchor="middle" class="t disp" font-size="12.5">dispatcher: scheduler</text><text x="70" y="18" text-anchor="middle" class="tm" font-size="10">who has a free desk?</text></g>
+</g>
+<rect x="70" y="230" width="640" height="190" class="s2f"/>
+<line x1="390" y1="230" x2="390" y2="420" class="ln" stroke-width="3"/>
+<text x="86" y="254" class="f2 disp" font-size="13">Staff floor A: node</text><text x="406" y="254" class="f2 disp" font-size="13">Staff floor B: node</text>
+<g font-size="11.5">
+<rect x="86" y="266" width="90" height="34" rx="8" class="pp"/><text x="131" y="282" text-anchor="middle" class="t">ID badge</text><text x="131" y="295" text-anchor="middle" class="tm" font-size="10">kubelet</text>
+<rect x="184" y="266" width="90" height="34" rx="8" class="pp"/><text x="229" y="282" text-anchor="middle" class="t">the skill</text><text x="229" y="295" text-anchor="middle" class="tm" font-size="10">containerd</text>
+<rect x="282" y="266" width="92" height="34" rx="8" class="pp"/><text x="328" y="282" text-anchor="middle" class="t">switchboard</text><text x="328" y="295" text-anchor="middle" class="tm" font-size="10">kube-proxy</text>
+<rect x="406" y="266" width="90" height="34" rx="8" class="pp"/><text x="451" y="289" text-anchor="middle" class="t">kubelet</text>
+<rect x="504" y="266" width="90" height="34" rx="8" class="pp"/><text x="549" y="289" text-anchor="middle" class="t">containerd</text>
+<rect x="602" y="266" width="92" height="34" rx="8" class="pp"/><text x="648" y="289" text-anchor="middle" class="t">kube-proxy</text>
+</g>
+<rect x="100" y="326" width="70" height="38" rx="19.0" class="f2"/><text x="135.0" y="349.0" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">Pod</text><rect x="186" y="326" width="70" height="38" rx="19.0" class="f2"/><text x="221.0" y="349.0" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">Pod</text><rect x="430" y="326" width="70" height="38" rx="19.0" class="f2"/><text x="465.0" y="349.0" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">Pod</text>
+<rect x="272" y="322" width="104" height="46" rx="10" class="pp"/><text x="324" y="341" text-anchor="middle" class="t" font-size="11.5">team lead</text><text x="324" y="358" text-anchor="middle" class="tm" font-size="10">Deployment: always 3</text>
+<rect x="520" y="322" width="174" height="46" rx="10" class="s3f"/><text x="607" y="341" text-anchor="middle" class="t" font-size="11.5">group chat: Service</text><text x="607" y="358" text-anchor="middle" class="tm" font-size="10">whoever is healthy answers</text>
+<text x="390" y="402" text-anchor="middle" class="t2" font-size="12">one app container per pod: frontend and backend scale apart, and fail apart</text>
+<rect x="50" y="420" width="680" height="10" rx="3" class="s1f"/>
+</svg>

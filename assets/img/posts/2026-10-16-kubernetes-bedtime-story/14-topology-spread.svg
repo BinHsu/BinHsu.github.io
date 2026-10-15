@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 262" width="780" height="262" role="img" aria-label="Topology spread with maxSkew 1"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="260" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<text x="200" y="34" text-anchor="middle" class="t disp" font-size="14">7 pods, maxSkew: 1, allowed</text>
+<text x="580" y="34" text-anchor="middle" class="t disp" font-size="14">7 pods, not spread, rejected</text>
+<rect x="30" y="50" width="104" height="150" rx="10" class="pp2"/><text x="82" y="220" text-anchor="middle" class="t2" font-size="12">zone A: 3</text><rect x="148" y="50" width="104" height="150" rx="10" class="pp2"/><text x="200" y="220" text-anchor="middle" class="t2" font-size="12">zone B: 2</text><rect x="266" y="50" width="104" height="150" rx="10" class="pp2"/><text x="318" y="220" text-anchor="middle" class="t2" font-size="12">zone C: 2</text><rect x="410" y="50" width="104" height="150" rx="10" class="pp2"/><text x="462" y="220" text-anchor="middle" class="t2" font-size="12">zone A: 4</text><rect x="528" y="50" width="104" height="150" rx="10" class="pp2"/><text x="580" y="220" text-anchor="middle" class="t2" font-size="12">zone B: 2</text><rect x="646" y="50" width="104" height="150" rx="10" class="pp2"/><text x="698" y="220" text-anchor="middle" class="t2" font-size="12">zone C: 1</text><rect x="50" y="160" width="64" height="28" rx="14" class="f2"/><rect x="50" y="126" width="64" height="28" rx="14" class="f2"/><rect x="50" y="92" width="64" height="28" rx="14" class="f2"/><rect x="168" y="160" width="64" height="28" rx="14" class="f2"/><rect x="168" y="126" width="64" height="28" rx="14" class="f2"/><rect x="286" y="160" width="64" height="28" rx="14" class="f2"/><rect x="286" y="126" width="64" height="28" rx="14" class="f2"/><rect x="430" y="160" width="64" height="28" rx="14" class="fw"/><rect x="430" y="126" width="64" height="28" rx="14" class="fw"/><rect x="430" y="92" width="64" height="28" rx="14" class="fw"/><rect x="430" y="58" width="64" height="28" rx="14" class="fw"/><rect x="548" y="160" width="64" height="28" rx="14" class="fw"/><rect x="548" y="126" width="64" height="28" rx="14" class="fw"/><rect x="666" y="160" width="64" height="28" rx="14" class="fw"/>
+<text x="200" y="244" text-anchor="middle" class="tm" font-size="11.5">max - min = 3 - 2 = 1, within maxSkew</text>
+<text x="580" y="244" text-anchor="middle" class="tm" font-size="11.5">4 - 1 = 3 > 1; losing zone A takes 4</text>
+</svg>

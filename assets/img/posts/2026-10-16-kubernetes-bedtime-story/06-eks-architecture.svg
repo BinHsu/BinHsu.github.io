@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 372" width="780" height="372" role="img" aria-label="Three-tier app on EKS"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="370" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<rect x="170" y="80" width="590" height="280" rx="16" class="pp2"/><text x="188" y="104" class="tm disp" font-size="13">VPC</text>
+<rect x="200" y="114" width="400" height="236" rx="14" class="s2f"/>
+<text x="216" y="136" class="f2 disp" font-size="14">EKS cluster, namespace 3-tier-app-eks</text>
+<circle cx="60" cy="50" r="16" class="f3"/><path d="M36 98 a24 24 0 0 1 48 0z" class="f3"/>
+<text x="60" y="118" text-anchor="middle" class="t2" font-size="12">users</text>
+<rect x="110" y="32" width="150" height="38" rx="10" class="s3f"/><text x="185" y="56" text-anchor="middle" class="t" font-size="12.5">Route 53: app.domain</text>
+<path d="M84 50 H106" class="l3" stroke-width="2" marker-end="url(#ah3)"/>
+<rect x="300" y="32" width="190" height="38" rx="10" class="s3f"/><text x="395" y="56" text-anchor="middle" class="t" font-size="12.5">ALB (made from Ingress)</text>
+<path d="M260 50 H296" class="l3" stroke-width="2" marker-end="url(#ah3)"/>
+<rect x="216" y="150" width="170" height="46" rx="10" class="pp"/><text x="301" y="170" text-anchor="middle" class="t disp" font-size="13">Ingress (alb)</text>
+<text x="301" y="186" text-anchor="middle" class="tm mono" font-size="10.5">/api: backend  /: frontend</text>
+<path d="M395 70 V100 H184 V173 H212" class="l3" stroke-width="2" marker-end="url(#ah3)"/>
+<rect x="216" y="216" width="170" height="40" rx="20.0" class="f2"/><text x="301.0" y="240.0" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">frontend (React)</text><rect x="216" y="268" width="170" height="40" rx="20.0" class="f2"/><text x="301.0" y="292.0" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">backend (Flask)</text>
+<rect x="410" y="150" width="174" height="46" rx="10" class="s1f"/><text x="497" y="170" text-anchor="middle" class="t disp" font-size="12.5">AWS LB Controller</text>
+<text x="497" y="186" text-anchor="middle" class="tm" font-size="10.5">kube-system, IRSA role</text>
+<path d="M410 173 H390" class="l1" stroke-width="2" stroke-dasharray="4 3"/>
+<rect x="410" y="216" width="174" height="40" rx="10" class="pp"/><text x="497" y="241" text-anchor="middle" class="t" font-size="12">Job: DB migration first</text>
+<rect x="410" y="268" width="174" height="40" rx="10" class="s3f"/><text x="497" y="286" text-anchor="middle" class="t" font-size="12">Service postgres-db</text>
+<text x="497" y="301" text-anchor="middle" class="tm" font-size="10.5">type: ExternalName</text>
+<path d="M386 288 H406" class="l3" stroke-width="2" marker-end="url(#ah3)"/>
+<rect x="614" y="200" width="132" height="130" rx="12" class="pp"/>
+<text x="680" y="222" text-anchor="middle" class="tm" font-size="11">private subnet</text>
+<ellipse cx="680" cy="248" rx="34" ry="9" class="s1f"/><rect x="646" y="248" width="68" height="40" class="s1f"/><ellipse cx="680" cy="288" rx="34" ry="9" class="s1f"/>
+<text x="680" y="274" text-anchor="middle" class="t disp" font-size="12.5">RDS</text>
+<text x="680" y="316" text-anchor="middle" class="t2" font-size="10.5">SG: 5432 from node SG</text>
+<path d="M584 288 H642" class="l3" stroke-width="2" marker-end="url(#ah3)"/>
+<text x="216" y="340" class="egg" font-size="11.5">first attempt: no ALB. the subnets were missing a tag.</text>
+</svg>

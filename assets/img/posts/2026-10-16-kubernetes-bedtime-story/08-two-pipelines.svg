@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 326" width="780" height="326" role="img" aria-label="Logs and metrics as two separate pipelines"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="324" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<text x="24" y="34" class="f2 disp" font-size="14">Logs: what happened</text>
+<g font-size="12">
+<rect x="24" y="46" width="150" height="46" rx="10" class="s2f"/><text x="99" y="66" text-anchor="middle" class="t">Fargate pods</text><text x="99" y="82" text-anchor="middle" class="tm" font-size="10.5">EKS OpenTelemetry add-on</text>
+<rect x="24" y="106" width="150" height="58" rx="10" class="s2f"/><text x="99" y="126" text-anchor="middle" class="t">StatefulSet pod</text><text x="99" y="142" text-anchor="middle" class="tm" font-size="10.5">app + Fluent Bit sidecar</text><text x="99" y="156" text-anchor="middle" class="tm" font-size="10.5">shared volume</text>
+<rect x="210" y="72" width="120" height="60" rx="10" class="pp2"/><text x="270" y="96" text-anchor="middle" class="t disp" font-size="13">CloudWatch</text><text x="270" y="114" text-anchor="middle" class="t2" font-size="11">30 days</text>
+<rect x="360" y="72" width="110" height="60" rx="10" class="pp2"/><text x="415" y="96" text-anchor="middle" class="t" font-size="12">formatter</text><text x="415" y="112" text-anchor="middle" class="t" font-size="12">Lambda</text><text x="415" y="126" text-anchor="middle" class="tm" font-size="10.5">every 5 min</text>
+<rect x="500" y="72" width="110" height="60" rx="10" class="pp2"/><text x="555" y="96" text-anchor="middle" class="t" font-size="12">Firehose</text><text x="555" y="114" text-anchor="middle" class="tm" font-size="10.5">20 min buffer</text>
+<rect x="640" y="46" width="116" height="46" rx="10" class="pp2"/><text x="698" y="66" text-anchor="middle" class="t" font-size="12">OpenSearch</text><text x="698" y="82" text-anchor="middle" class="t2" font-size="10.5">7 days</text>
+<rect x="640" y="106" width="116" height="46" rx="10" class="pp2"/><text x="698" y="126" text-anchor="middle" class="t" font-size="12">S3</text><text x="698" y="142" text-anchor="middle" class="t2" font-size="10.5">long term</text>
+</g>
+<g stroke-width="2" class="l2">
+<path d="M174 69 H194 V94 H206" marker-end="url(#ah2)"/><path d="M174 135 H194 V110 H206" marker-end="url(#ah2)"/>
+<path d="M330 102 H356" marker-end="url(#ah2)"/><path d="M470 102 H496" marker-end="url(#ah2)"/>
+<path d="M610 94 H624 V69 H636" marker-end="url(#ah2)"/><path d="M610 110 H624 V129 H636" marker-end="url(#ah2)"/>
+</g>
+<line x1="24" y1="192" x2="756" y2="192" class="ln" stroke-dasharray="3 5"/>
+<text x="24" y="222" class="f1 disp" font-size="14">Metrics: how much, since when</text>
+<g font-size="12">
+<rect x="24" y="236" width="150" height="56" rx="10" class="s1f"/><text x="99" y="258" text-anchor="middle" class="t">app /metrics</text><text x="99" y="276" text-anchor="middle" class="tm" font-size="10.5">Prometheus client SDK</text>
+<rect x="230" y="236" width="190" height="56" rx="10" class="s1f"/><text x="325" y="256" text-anchor="middle" class="t disp" font-size="13">Prometheus</text><text x="325" y="273" text-anchor="middle" class="t2" font-size="10.5">pulls every 15-30 s</text><text x="325" y="286" text-anchor="middle" class="t2" font-size="10.5">15 days / 10 GB</text>
+<rect x="480" y="220" width="276" height="88" rx="12" class="pp2"/><text x="618" y="246" text-anchor="middle" class="t disp" font-size="15">Grafana</text>
+<text x="618" y="268" text-anchor="middle" class="t2" font-size="11">data sources: Prometheus, CloudWatch, OpenSearch</text>
+<text x="618" y="288" text-anchor="middle" class="egg" font-size="11">a panel is not an alert</text>
+</g>
+<g stroke-width="2">
+<path d="M226 264 H174" class="l1" marker-start="url(#ah1)"/>
+<path d="M420 264 H476" class="l1" marker-end="url(#ah1)"/>
+<path d="M698 152 C698 190 650 200 630 216" class="l2" stroke-dasharray="4 4" marker-end="url(#ah2)"/>
+</g>
+</svg>

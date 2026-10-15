@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 270" width="780" height="270" role="img" aria-label="Monolith to microservices to Kubernetes"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="268" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<text x="130" y="34" text-anchor="middle" class="t disp" font-size="15">1. Monolith</text>
+<path d="M40 110 L130 60 L220 110 Z" class="s2f"/><rect x="50" y="110" width="160" height="110" rx="6" class="s2f"/>
+<g font-size="11.5" class="t2">
+<rect x="60" y="120" width="68" height="28" rx="4" class="pp"/><text x="94" y="138" text-anchor="middle">accounts</text>
+<rect x="132" y="120" width="68" height="28" rx="4" class="pp"/><text x="166" y="138" text-anchor="middle">catalog</text>
+<rect x="60" y="152" width="68" height="28" rx="4" class="pp"/><text x="94" y="170" text-anchor="middle">recs</text>
+<rect x="132" y="152" width="68" height="28" rx="4" class="pp"/><text x="166" y="170" text-anchor="middle">cart</text>
+<rect x="60" y="184" width="140" height="28" rx="4" class="swf"/><text x="130" y="202" text-anchor="middle" class="fw">payments bug: all down</text>
+</g>
+<path d="M128 114 l-6 12 l8 4 l-6 14" class="lw" stroke-width="2"/>
+<text x="130" y="246" text-anchor="middle" class="tm" font-size="12">scale together, fall together</text>
+<path d="M238 140 H272" class="lk" stroke-width="2" marker-end="url(#ah)"/>
+<text x="390" y="34" text-anchor="middle" class="t disp" font-size="15">2. Microservices</text>
+<g transform="translate(290 70)"><path d="M0 22 L22 4 L44 22Z" class="s2f"/><rect x="4" y="22" width="36" height="30" class="s2f"/></g><g transform="translate(346 70)"><path d="M0 22 L22 4 L44 22Z" class="s2f"/><rect x="4" y="22" width="36" height="30" class="s2f"/></g><g transform="translate(402 70)"><path d="M0 22 L22 4 L44 22Z" class="swf"/><rect x="4" y="22" width="36" height="30" class="swf"/></g><g transform="translate(458 70)"><path d="M0 22 L22 4 L44 22Z" class="s2f"/><rect x="4" y="22" width="36" height="30" class="s2f"/></g><g transform="translate(290 138)"><path d="M0 22 L22 4 L44 22Z" class="s2f"/><rect x="4" y="22" width="36" height="30" class="s2f"/></g><g transform="translate(346 138)"><path d="M0 22 L22 4 L44 22Z" class="s2f"/><rect x="4" y="22" width="36" height="30" class="s2f"/></g><g transform="translate(402 138)"><path d="M0 22 L22 4 L44 22Z" class="s2f"/><rect x="4" y="22" width="36" height="30" class="s2f"/></g><g transform="translate(458 138)"><path d="M0 22 L22 4 L44 22Z" class="s2f"/><rect x="4" y="22" width="36" height="30" class="s2f"/></g>
+<text x="424" y="114" text-anchor="middle" class="fw" font-size="16" font-weight="700">?</text>
+<text x="390" y="220" text-anchor="middle" class="t2" font-size="12">who restarts it? who finds its new IP?</text>
+<text x="390" y="246" text-anchor="middle" class="tm" font-size="12">50+ services, by hand</text>
+<path d="M512 140 H546" class="lk" stroke-width="2" marker-end="url(#ah)"/>
+<text x="655" y="34" text-anchor="middle" class="t disp" font-size="15">3. Kubernetes</text>
+<circle cx="655" cy="104" r="30" fill="none" stroke="#3E63DD" stroke-width="3"/><circle cx="655" cy="104" r="7.8" fill="#3E63DD" stroke="#3E63DD" stroke-width="3"/><line x1="655.0" y1="96.2" x2="655.0" y2="64.4" stroke="#3E63DD" stroke-width="3" stroke-linecap="round"/><line x1="661.1" y1="99.1" x2="686.0" y2="79.3" stroke="#3E63DD" stroke-width="3" stroke-linecap="round"/><line x1="662.6" y1="105.7" x2="693.6" y2="112.8" stroke="#3E63DD" stroke-width="3" stroke-linecap="round"/><line x1="658.4" y1="111.0" x2="672.2" y2="139.7" stroke="#3E63DD" stroke-width="3" stroke-linecap="round"/><line x1="651.6" y1="111.0" x2="637.8" y2="139.7" stroke="#3E63DD" stroke-width="3" stroke-linecap="round"/><line x1="647.4" y1="105.7" x2="616.4" y2="112.8" stroke="#3E63DD" stroke-width="3" stroke-linecap="round"/><line x1="648.9" y1="99.1" x2="624.0" y2="79.3" stroke="#3E63DD" stroke-width="3" stroke-linecap="round"/>
+<g font-size="11.5" class="t2">
+<text x="570" y="178">self-healing</text><text x="570" y="196">autoscaling</text>
+<text x="570" y="214">service discovery</text><text x="570" y="232">load balancing</text>
+</g>
+<text x="570" y="252" class="egg" font-size="11">(and a lot of YAML)</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 252" width="780" height="252" role="img" aria-label="A Service finds pods by label, not by IP"><style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang TC","Heiti TC","Noto Sans TC",Arial,sans-serif}
+.disp{font-weight:700}
+.mono{font-family:Menlo,Consolas,"DejaVu Sans Mono",monospace}
+.t{fill:#1A2040}.t2{fill:#434C70}.tm{fill:#69719A}
+.f1{fill:#3E63DD}.f2{fill:#B07606}.f3{fill:#12927F}.fw{fill:#B4442E}
+.s1f{fill:#E3E9FC}.s2f{fill:#F6ECD6}.s3f{fill:#D9F1EC}.swf{fill:#F8E2DC}
+.pp{fill:#FFFFFF}.pp2{fill:#EEF1F8}
+.ln{stroke:#D3D9EA;fill:none}.lk{stroke:#434C70;fill:none}
+.l1{stroke:#3E63DD;fill:none}.l2{stroke:#B07606;fill:none}.l3{stroke:#12927F;fill:none}.lw{stroke:#B4442E;fill:none}
+.egg{fill:#7A5BB0;font-style:italic}
+</style><defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#434C70"/></marker>
+<marker id="ah1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3E63DD"/></marker>
+<marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B07606"/></marker>
+<marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12927F"/></marker>
+</defs><rect x="1" y="1" width="778" height="250" rx="16" fill="#F7F8FC" stroke="#D3D9EA"/>
+<rect x="30" y="80" width="190" height="90" rx="12" class="s3f"/>
+<text x="125" y="108" text-anchor="middle" class="f3 disp" font-size="15">Service</text>
+<text x="125" y="132" text-anchor="middle" class="t mono" font-size="13">172.20.221.240</text>
+<text x="125" y="154" text-anchor="middle" class="tm mono" font-size="11.5">selector: app=my-app</text>
+<path d="M220 110 C300 110 300 60 370 60" class="l3" stroke-width="2" marker-end="url(#ah3)"/>
+<path d="M220 125 H370" class="l3" stroke-width="2" marker-end="url(#ah3)"/>
+<path d="M220 140 C300 140 300 190 370 190" class="l3" stroke-width="2" marker-end="url(#ah3)"/>
+<rect x="374" y="38" width="170" height="44" rx="22.0" class="f2"/><text x="459.0" y="64.0" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">172.17.1.4</text><rect x="374" y="103" width="170" height="44" rx="22.0" class="f2"/><text x="459.0" y="129.0" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">172.17.1.5</text>
+<rect x="374" y="168" width="170" height="44" rx="22" class="swf"/>
+<text x="459" y="187" text-anchor="middle" class="fw mono" font-size="12">172.17.1.6 died</text>
+<text x="459" y="203" text-anchor="middle" class="fw" font-size="11">new pod, new IP</text>
+<rect x="580" y="50" width="172" height="150" rx="12" class="s2f"/>
+<text x="666" y="76" text-anchor="middle" class="f2 disp" font-size="15">Deployment</text>
+<g font-size="12.5" class="t2">
+<text x="666" y="104" text-anchor="middle">replicas: 3</text>
+<text x="666" y="126" text-anchor="middle">one leaves, one joins</text>
+<text x="666" y="148" text-anchor="middle">rolling updates</text>
+<text x="666" y="170" text-anchor="middle">scale on request</text>
+</g>
+<path d="M580 125 H550" class="l2" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="459" y="236" text-anchor="middle" class="egg" font-size="11.5">the Service never learned its name, and never needed to</text>
+</svg>
