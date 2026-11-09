@@ -64,12 +64,20 @@ the manifest to a path under `/var/lib`, for example `/var/lib/datakit_cache`.
 ### On GKE Autopilot
 
 Autopilot rejects the standard DataKit DaemonSet: it uses host namespaces, privileged mode and
-writable hostPath volumes, which Autopilot only allows for vendors on its partner allowlist. In our
-test the admission was refused under three policies (`autogke-disallow-hostnamespaces`,
-`autogke-disallow-privilege`, `autogke-no-write-mode-hostpath`).
+writable hostPath volumes. In our test the admission was refused under three policies
+(`autogke-disallow-hostnamespaces`, `autogke-disallow-privilege`, `autogke-no-write-mode-hostpath`).
 
-Use the Autopilot manifest from the DataKit documentation instead (`datakit-gke-autopilot.yaml`, a
-Deployment), with the inputs reduced to what receiving OTLP needs:
+There are two ways around it:
+
+- **Partner mode (allowlist).** DataKit has its own Autopilot workload allowlist, published by
+  Google (TrueWatch is not yet shown on Google's public partner page). On GKE
+  1.35.6-gke.1258000 or later you sync the allowlist once per cluster and install the DataKit chart
+  with its Autopilot partner values; DataKit then runs as a DaemonSet with read-only access to
+  container logs. Steps: [GCP GKE Autopilot Integration](https://docs.truewatch.com/datakit/gcp-gke-autopilot/).
+  We have not tested this mode yet.
+- **A Deployment, no allowlist needed.** This is what we tested. Use the Autopilot manifest from the
+  DataKit documentation (`datakit-gke-autopilot.yaml`), with the inputs reduced to what receiving
+  OTLP needs:
 
 ```yaml
 - name: ENV_DEFAULT_ENABLED_INPUTS
@@ -81,7 +89,7 @@ Deployment), with the inputs reduced to what receiving OTLP needs:
 It was admitted without warnings and received 100/100 spans and 50/50 logs over both gRPC and HTTP.
 The trade-off: this DataKit cannot see the nodes, so there is no host metrics or container file-log
 collection, and there is one DataKit for the whole cluster. For receiving OTLP that your
-applications send, that is enough.
+applications send, that is enough; if you also want container logs, use Partner mode.
 
 ### Step 2: point your applications at DataKit
 
