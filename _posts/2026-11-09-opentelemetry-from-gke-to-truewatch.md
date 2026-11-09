@@ -3,6 +3,10 @@ title: "Sending OpenTelemetry from GKE to TrueWatch"
 description: "GKE's new Managed OpenTelemetry only sends to Google. What we measured on GKE 1.37 Standard and Autopilot clusters, and the settings that get your OTLP data into TrueWatch through DataKit."
 date: 2026-11-09 14:00:00 +0800
 tags: [opentelemetry, gke, kubernetes, observability]
+asset_path: /assets/img/posts/2026-11-09-opentelemetry-from-gke-to-truewatch
+image:
+  path: /assets/img/posts/2026-11-09-opentelemetry-from-gke-to-truewatch/two-roads.png
+  alt: "Two roads from your app: GKE's managed collector delivers only to Google Cloud Observability; DataKit delivers to TrueWatch"
 ---
 
 *Tested on GKE 1.37.1-gke.2097000 (Standard and Autopilot) with DataKit 2.18.0.*
@@ -20,6 +24,9 @@ telemetry should go, two things matter.
   endpoint"*.
 - If an `Instrumentation` resource matches a Pod, it **overwrites the Pod's own OTLP endpoint and
   protocol without any warning**. A Pod we configured for DataKit was rewritten to send to Google.
+
+![A Pod configured to send gRPC to DataKit on port 4317 comes out of admission sending http/protobuf to the GKE managed collector on port 4318]({{ page.asset_path }}/silent-hijack.png)
+_What a matching Instrumentation resource did to our test Pod._
 
 **So: send to DataKit directly, and keep Google's automatic injection away from those workloads.**
 
